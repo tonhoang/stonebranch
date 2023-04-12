@@ -1,0 +1,212 @@
+actions:
+  abortActions: []
+  emailNotifications: []
+  setVariableActions: []
+  snmpNotifications: []
+  systemOperations: []
+agent: 129.213.52.12-rehl79- AGNT0001
+agentCluster: null
+agentClusterVar: null
+agentVar: null
+autoCleanup: false
+booleanField1:
+  label: UC SSL Certificate  Verification
+  name: uc_ssl_cert_verification
+  value: true
+booleanField2:
+  label: Git SSL Certificate Verification
+  name: git_ssl_cert_verification
+  value: true
+broadcastCluster: null
+broadcastClusterVar: null
+choiceField1:
+  label: Action
+  name: action
+  value: Export to Git Repository
+choiceField2:
+  label: Selection Method
+  name: selection_method
+  value: definition_name
+choiceField3:
+  label: Selection Name
+  name: selection_name
+  value: '*'
+choiceField4:
+  label: Selection Exclude List
+  name: selection_exclude_list
+  value: null
+choiceField5:
+  label: Git Service Provider
+  name: git_service_provider
+  value: GitHub
+choiceField6:
+  label: Git Repository File Format
+  name: git_repository_file_format
+  value: Yaml
+choiceField7:
+  label: Git Repository
+  name: git_repository
+  value: tonhoang/stonebranch
+choiceField8:
+  label: Git Repository Branch
+  name: git_repository_branch
+  value: main
+choiceField9:
+  label: Proxy Type
+  name: proxy_type
+  value: -- None --
+cpDuration: null
+cpDurationUnit: Minutes
+createConsole: false
+credentialField1:
+  label: Universal Controller Credentials
+  name: uc_credentials
+  value: UAC_REST_CRED
+credentialField2:
+  label: Git Credentials
+  name: git_credentials
+  value: tonhoang-github
+credentialField3:
+  label: Proxy Credentials
+  name: proxy_credentials
+  value: null
+credentials: null
+credentialsVar: null
+customField1:
+  label: null
+  value: null
+customField2:
+  label: null
+  value: null
+desktopInteract: false
+efDayConstraint: None
+efDuration: 00:00:00:00
+efEnabled: false
+efNthAmount: 5
+efOffsetDuration: null
+efOffsetDurationUnit: Minutes
+efOffsetPercentage: 0
+efOffsetType: Percentage
+efTime: 00:00
+efType: Time
+elevateUser: false
+environment: []
+exclusiveTasks: []
+exclusiveWithSelf: false
+executionRestriction: None
+exitCodeOutput: null
+exitCodeProcessing: Success Exitcode Range
+exitCodeText: null
+exitCodes: '0'
+exportReleaseLevel: 7.4.0.0
+exportTable: ops_task_universal
+firstRun: ''
+holdResources: false
+largeTextField1:
+  label: Add UC Definitions List
+  name: add_uc_definitions_list
+  value: null
+largeTextField2:
+  label: Modify UC Definitions List
+  name: modify_uc_definitions_list
+  value: null
+largeTextField3:
+  label: Remove UC Definitions List
+  name: remove_uc_definitions_list
+  value: null
+lastRun: ''
+lfDayConstraint: None
+lfDuration: 00:00:00:00
+lfEnabled: false
+lfNthAmount: 5
+lfOffsetDuration: null
+lfOffsetDurationUnit: Minutes
+lfOffsetPercentage: 0
+lfOffsetType: Percentage
+lfTime: 00:00
+lfType: Time
+logLevel: Inherited
+lsDayConstraint: None
+lsDuration: 00:00:00:00
+lsEnabled: false
+lsNthAmount: 5
+lsTime: 00:00
+lsType: Time
+name: test
+notes: []
+opswiseGroups: []
+outputConditionOperator: '='
+outputConditionStrategy: Match Any
+outputConditionValue: null
+outputContentType: null
+outputFailureOnly: false
+outputPathExpression: null
+outputReturnFile: null
+outputReturnNline: null
+outputReturnSline: '1'
+outputReturnText: null
+outputReturnType: OUTERR
+outputType: STDOUT
+resPriority: 10
+resolveNameImmediately: false
+restrictionPeriod: None
+restrictionPeriodAfterDate: null
+restrictionPeriodAfterTime: null
+restrictionPeriodBeforeDate: null
+restrictionPeriodBeforeTime: null
+restrictionPeriodDateList: []
+retainSysIds: true
+retryExitCodes: null
+retryIndefinitely: false
+retryInterval: 60
+retryMaximum: 0
+retrySuppressFailure: false
+runCount: 0
+runTime: 0
+runtimeDir: null
+simulation: false
+startHeld: false
+startHeldReason: null
+summary: null
+sysId: a3ff4f7d2c8a4496be0c199552a2b549
+template: Jobs As Code
+textField1:
+  label: Universal Controller URL
+  name: uc_url
+  value: http://129.213.52.12:8080/uc/
+textField2:
+  label: Git Service Provider URL
+  name: git_service_provider_url
+  value: https://github.com/
+textField3:
+  label: Git Repository Path
+  name: git_repository_path
+  value: null
+textField4:
+  label: Proxy
+  name: proxy
+  value: null
+textField5:
+  label: Proxy CA Bundle File
+  name: proxy_ca_bundle_file
+  value: null
+textField6:
+  label: Git Commit Message (export)
+  name: git_commit_message
+  value: test
+timeZonePref: -- System Default --
+twDelayAmount: null
+twDelayDuration: 00:00:00:00
+twDelayType: None
+twWaitAmount: null
+twWaitDayConstraint: None
+twWaitDuration: 00:00:00:00
+twWaitTime: 00:00
+twWaitType: None
+twWorkflowOnly: -- System Default --
+type: taskUniversal
+userEstimatedDuration: null
+variables: []
+version: 4
+virtualResources: []
+waitForOutput: false
