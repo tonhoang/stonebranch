@@ -1,0 +1,148 @@
+actions:
+  abortActions: []
+  emailNotifications: []
+  setVariableActions: []
+  snmpNotifications: []
+  systemOperations: []
+agent: 129.213.52.12-rehl79- AGNT0001
+agentCluster: null
+agentClusterVar: null
+agentVar: null
+autoCleanup: false
+avgRunTime: 43
+avgRunTimeDisplay: 43 Seconds
+broadcastCluster: null
+broadcastClusterVar: null
+choiceField1:
+  label: Action
+  name: action
+  value: print
+choiceField2:
+  label: Primary Choice
+  name: primary_choice_field
+  value: Start
+choiceField3:
+  label: Secondary Choice
+  name: secondary_choice_field
+  value: Application
+cpDuration: null
+cpDurationUnit: Minutes
+createConsole: false
+credentials: null
+credentialsVar: null
+customField1:
+  label: null
+  value: null
+customField2:
+  label: null
+  value: null
+desktopInteract: false
+efDayConstraint: None
+efDuration: 00:00:00:00
+efEnabled: false
+efNthAmount: 5
+efOffsetDuration: null
+efOffsetDurationUnit: Minutes
+efOffsetPercentage: 0
+efOffsetType: Percentage
+efTime: 00:00
+efType: Time
+elevateUser: false
+environment: []
+exclusiveTasks: []
+exclusiveWithSelf: false
+executionRestriction: None
+exitCodeOutput: null
+exitCodeProcessing: Success Exitcode Range
+exitCodeText: null
+exitCodes: '0'
+exportReleaseLevel: 7.4.0.0
+exportTable: ops_task_universal
+firstRun: 2023-04-07 10:18:19 +0700
+holdResources: false
+intField1:
+  label: Cancel Cleanup Time
+  name: cancel_cleanup_time
+  value: 15
+lastRun: 2023-04-10 11:47:26 +0700
+lastRunTime: 48
+lastRunTimeDisplay: 48 Seconds
+lfDayConstraint: None
+lfDuration: 00:00:00:00
+lfEnabled: false
+lfNthAmount: 5
+lfOffsetDuration: null
+lfOffsetDurationUnit: Minutes
+lfOffsetPercentage: 0
+lfOffsetType: Percentage
+lfTime: 00:00
+lfType: Time
+logLevel: Inherited
+lsDayConstraint: None
+lsDuration: 00:00:00:00
+lsEnabled: false
+lsNthAmount: 5
+lsTime: 00:00
+lsType: Time
+maxRunTime: 48
+maxRunTimeDisplay: 48 Seconds
+minRunTime: 41
+minRunTimeDisplay: 41 Seconds
+name: ue-task-test
+notes: []
+opswiseGroups: []
+outputConditionOperator: '='
+outputConditionStrategy: Match Any
+outputConditionValue: null
+outputContentType: null
+outputFailureOnly: false
+outputPathExpression: null
+outputReturnFile: null
+outputReturnNline: '100'
+outputReturnSline: '1'
+outputReturnText: null
+outputReturnType: OUTERR
+outputType: STDOUT
+resPriority: 10
+resolveNameImmediately: false
+restrictionPeriod: None
+restrictionPeriodAfterDate: null
+restrictionPeriodAfterTime: null
+restrictionPeriodBeforeDate: null
+restrictionPeriodBeforeTime: null
+restrictionPeriodDateList: []
+retainSysIds: true
+retryExitCodes: null
+retryIndefinitely: false
+retryInterval: 60
+retryMaximum: 0
+retrySuppressFailure: false
+runCount: 4
+runTime: 172
+runtimeDir: null
+simulation: false
+startHeld: false
+startHeldReason: null
+summary: null
+sysId: 3aaad69ea35f41f38e6da72ec1c80e22
+template: UE Task
+textField4:
+  label: Word
+  name: word
+  value: ABCD
+timeZonePref: -- System Default --
+twDelayAmount: null
+twDelayDuration: 00:00:00:00
+twDelayType: None
+twWaitAmount: null
+twWaitDayConstraint: None
+twWaitDuration: 00:00:00:00
+twWaitTime: 00:00
+twWaitType: None
+twWorkflowOnly: -- System Default --
+type: taskUniversal
+userEstimatedDuration: null
+variables: []
+version: 3
+virtualResources: []
+waitForOutput: false
