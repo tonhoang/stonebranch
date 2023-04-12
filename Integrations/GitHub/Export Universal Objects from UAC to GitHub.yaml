@@ -1,0 +1,184 @@
+actions:
+  abortActions: []
+  emailNotifications: []
+  setVariableActions: []
+  snmpNotifications: []
+  systemOperations: []
+agent: 129.213.52.12-rehl79- AGNT0001
+agentCluster: null
+agentClusterVar: null
+agentVar: null
+autoCleanup: false
+broadcastCluster: null
+broadcastClusterVar: null
+choiceField1:
+  label: Loglevel
+  name: loglevel
+  value: DEBUG
+choiceField2:
+  label: Operation Type
+  name: operation_type
+  value: UAC_to_GitHub
+choiceField3:
+  label: Object Type
+  name: object_type
+  value: universaltemplate
+cpDuration: null
+cpDurationUnit: Minutes
+createConsole: false
+credentialField1:
+  label: GitHub Token
+  name: github_token
+  value: Github Token
+credentialField2:
+  label: UAC REST Credentials
+  name: rest_credentials_uac
+  value: UAC_REST_CRED
+credentials: null
+credentialsVar: null
+customField1:
+  label: null
+  value: null
+customField2:
+  label: null
+  value: null
+desktopInteract: false
+efDayConstraint: None
+efDuration: 00:00:00:00
+efEnabled: false
+efNthAmount: 5
+efOffsetDuration: null
+efOffsetDurationUnit: Minutes
+efOffsetPercentage: 0
+efOffsetType: Percentage
+efTime: 00:00
+efType: Time
+elevateUser: false
+environment: []
+exclusiveTasks: []
+exclusiveWithSelf: false
+executionRestriction: None
+exitCodeOutput: null
+exitCodeProcessing: Success Exitcode Range
+exitCodeText: null
+exitCodes: '0'
+exportReleaseLevel: 7.4.0.0
+exportTable: ops_task_universal
+firstRun: ''
+holdResources: false
+lastRun: ''
+lfDayConstraint: None
+lfDuration: 00:00:00:00
+lfEnabled: false
+lfNthAmount: 5
+lfOffsetDuration: null
+lfOffsetDurationUnit: Minutes
+lfOffsetPercentage: 0
+lfOffsetType: Percentage
+lfTime: 00:00
+lfType: Time
+logLevel: Inherited
+lsDayConstraint: None
+lsDuration: 00:00:00:00
+lsEnabled: false
+lsNthAmount: 5
+lsTime: 00:00
+lsType: Time
+name: Export Universal Objects from UAC to GitHub
+notes: []
+opswiseGroups: []
+outputConditionOperator: '='
+outputConditionStrategy: Match Any
+outputConditionValue: null
+outputContentType: null
+outputFailureOnly: false
+outputPathExpression: null
+outputReturnFile: null
+outputReturnNline: '200'
+outputReturnSline: '1'
+outputReturnText: null
+outputReturnType: OUTERR
+outputType: STDOUT
+resPriority: 10
+resolveNameImmediately: false
+restrictionPeriod: None
+restrictionPeriodAfterDate: null
+restrictionPeriodAfterTime: null
+restrictionPeriodBeforeDate: null
+restrictionPeriodBeforeTime: null
+restrictionPeriodDateList: []
+retainSysIds: true
+retryExitCodes: null
+retryIndefinitely: false
+retryInterval: 60
+retryMaximum: 0
+retrySuppressFailure: false
+runCount: 0
+runTime: 0
+runtimeDir: null
+scriptField1:
+  label: Object Name
+  name: script_name
+  value: null
+simulation: false
+startHeld: false
+startHeldReason: null
+summary: Export Universal Objects from UAC to GitHub
+sysId: f79f2161dd2449b8a15c343961d1e97a
+template: GitHub
+textField1:
+  label: GitHub Base URL
+  name: git_base_url
+  value: null
+textField10:
+  label: Content Folder Name
+  name: content_folder
+  value: null
+textField2:
+  label: Repository Path
+  name: repo_path
+  value: buithuhak22httta/stonebranch-marketplace-ut-sql-tasks
+textField3:
+  label: Branch
+  name: branch
+  value: main
+textField4:
+  label: Change Message
+  name: change_message
+  value: null
+textField5:
+  label: UAC Base URL
+  name: base_url_uac
+  value: http://129.213.52.12:8080/uc/
+textField6:
+  label: Folder Name
+  name: folder
+  value: export
+textField7:
+  label: Object Name
+  name: object_name
+  value: UE Task
+textField8:
+  label: Object Sub Type
+  name: object_sub_type
+  value: null
+textField9:
+  label: Business Services
+  name: business_services
+  value: null
+timeZonePref: -- System Default --
+twDelayAmount: null
+twDelayDuration: 00:00:00:00
+twDelayType: None
+twWaitAmount: null
+twWaitDayConstraint: None
+twWaitDuration: 00:00:00:00
+twWaitTime: 00:00
+twWaitType: None
+twWorkflowOnly: -- System Default --
+type: taskUniversal
+userEstimatedDuration: null
+variables: []
+version: 13
+virtualResources: []
+waitForOutput: false
