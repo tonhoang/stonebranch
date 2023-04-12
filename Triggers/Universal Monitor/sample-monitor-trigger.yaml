@@ -1,0 +1,60 @@
+action: Do Not Trigger
+calendar: System Default
+customField1:
+  label: null
+  value: null
+customField2:
+  label: null
+  value: null
+description: null
+disabledBy: ops.admin
+disabledTime: 2023-04-07 16:34:27 +0700
+enabled: false
+enabledBy: ''
+enabledEnd: 00:00
+enabledStart: 00:00
+enabledTime: ''
+exportReleaseLevel: 7.4.0.0
+exportTable: ops_trigger_um
+name: sample-monitor-trigger
+nextScheduledTime: ''
+notes: []
+opswiseGroups: []
+rdExcludeBackup: false
+restrictedTimes: false
+restriction: false
+restrictionAdjective: Every
+restrictionComplex: false
+restrictionMode: Or
+restrictionNoun:
+  value: Day
+restrictionNouns:
+- value: Day
+restrictionNthAmount: 5
+restrictionQualifier:
+  value: Year
+restrictionQualifiers:
+- value: Year
+restrictionSimple: false
+retainSysIds: true
+retentionDuration: 1
+retentionDurationPurge: false
+retentionDurationUnit: Days
+situation: Holiday
+skipActive: false
+skipAfterDate: null
+skipAfterTime: null
+skipBeforeDate: null
+skipBeforeTime: null
+skipCondition: None
+skipCount: 0
+skipDateList: []
+skipRestriction: None
+sysId: 8e82e0e478dc48968813cef492ee472d
+taskMonitor: sample-monitor-task
+tasks:
+- Sleep 0
+timeZone: null
+type: triggerUm
+variables: []
+version: 1
