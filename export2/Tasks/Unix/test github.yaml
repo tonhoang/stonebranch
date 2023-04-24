@@ -1,0 +1,124 @@
+actions:
+  abortActions: []
+  emailNotifications: []
+  setVariableActions: []
+  snmpNotifications: []
+  systemOperations: []
+agent: 129.213.52.12-rehl79- AGNT0001
+agentCluster: null
+agentClusterVar: null
+agentVar: null
+avgRunTime: 1
+avgRunTimeDisplay: 1 Seconds
+broadcastCluster: null
+broadcastClusterVar: null
+command: 'curl -H "Authorization: token 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"
+  https://api.github.com/repos/tonhoang/stonebranch'
+commandOrScript: Command
+cpDuration: null
+cpDurationUnit: Minutes
+credentials: null
+credentialsVar: null
+customField1:
+  label: null
+  value: null
+customField2:
+  label: null
+  value: null
+efDayConstraint: None
+efDuration: 00:00:00:00
+efEnabled: false
+efNthAmount: 5
+efOffsetDuration: null
+efOffsetDurationUnit: Minutes
+efOffsetPercentage: 0
+efOffsetType: Percentage
+efTime: 00:00
+efType: Time
+environment: []
+exclusiveTasks: []
+exclusiveWithSelf: false
+executionRestriction: None
+exitCodeOutput: null
+exitCodeProcessing: Success Exitcode Range
+exitCodeText: null
+exitCodes: '0'
+exportReleaseLevel: 7.4.0.0
+exportTable: ops_task_unix
+firstRun: 2023-04-12 15:06:49 +0700
+holdResources: false
+lastRun: 2023-04-12 15:06:49 +0700
+lastRunTime: 1
+lastRunTimeDisplay: 1 Seconds
+lfDayConstraint: None
+lfDuration: 00:00:00:00
+lfEnabled: false
+lfNthAmount: 5
+lfOffsetDuration: null
+lfOffsetDurationUnit: Minutes
+lfOffsetPercentage: 0
+lfOffsetType: Percentage
+lfTime: 00:00
+lfType: Time
+logLevel: Inherited
+lsDayConstraint: None
+lsDuration: 00:00:00:00
+lsEnabled: false
+lsNthAmount: 5
+lsTime: 00:00
+lsType: Time
+maxRunTime: 1
+maxRunTimeDisplay: 1 Seconds
+minRunTime: 1
+minRunTimeDisplay: 1 Seconds
+name: test github
+notes: []
+opswiseGroups: []
+outputFailureOnly: false
+outputReturnFile: null
+outputReturnNline: '100'
+outputReturnSline: '1'
+outputReturnText: null
+outputReturnType: NONE
+outputType: STDOUT
+parameters: null
+resPriority: 10
+resolveNameImmediately: false
+restrictionPeriod: None
+restrictionPeriodAfterDate: null
+restrictionPeriodAfterTime: null
+restrictionPeriodBeforeDate: null
+restrictionPeriodBeforeTime: null
+restrictionPeriodDateList: []
+retainSysIds: true
+retryExitCodes: null
+retryIndefinitely: false
+retryInterval: 60
+retryMaximum: 0
+retrySuppressFailure: false
+runAsSudo: false
+runCount: 1
+runTime: 1
+runtimeDir: null
+script: null
+simulation: false
+startHeld: false
+startHeldReason: null
+summary: null
+sysId: dc60fc7e48504ed99121e931c3f62441
+timeZonePref: -- System Default --
+twDelayAmount: null
+twDelayDuration: 00:00:00:00
+twDelayType: None
+twWaitAmount: null
+twWaitDayConstraint: None
+twWaitDuration: 00:00:00:00
+twWaitTime: 00:00
+twWaitType: None
+twWorkflowOnly: -- System Default --
+type: taskUnix
+userEstimatedDuration: null
+variables: []
+version: 1
+virtualResources: []
+waitForOutput: false
