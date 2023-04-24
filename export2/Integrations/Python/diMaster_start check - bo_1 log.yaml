@@ -1,0 +1,184 @@
+actions:
+  abortActions: []
+  emailNotifications: []
+  setVariableActions:
+  - description: null
+    exitCodes: null
+    notificationOption: Operation Failure
+    notifyOnEarlyFinish: false
+    notifyOnLateFinish: false
+    notifyOnLateStart: false
+    notifyOnProjectedLate: false
+    status: Success
+    sysId: 53a70b9010764b308e5d471e8eb1929f
+    variableName: dimaster_start_recurrence_counter
+    variableScope: Global
+    variableValue: '0'
+  snmpNotifications: []
+  systemOperations: []
+agent: 129.213.52.12-rehl79- AGNT0001
+agentCluster: null
+agentClusterVar: null
+agentVar: null
+autoCleanup: false
+booleanField1:
+  label: Not Default Python
+  name: not_default_python
+  value: false
+broadcastCluster: null
+broadcastClusterVar: null
+choiceField1:
+  label: Python Script Location
+  name: python_script_location
+  value: uc_script_library
+cpDuration: null
+cpDurationUnit: Minutes
+createConsole: false
+credentials: null
+credentialsVar: null
+customField1:
+  label: null
+  value: null
+customField2:
+  label: null
+  value: null
+desktopInteract: false
+efDayConstraint: None
+efDuration: 00:00:00:00
+efEnabled: false
+efNthAmount: 5
+efOffsetDuration: null
+efOffsetDurationUnit: Minutes
+efOffsetPercentage: 0
+efOffsetType: Percentage
+efTime: 00:00
+efType: Time
+elevateUser: false
+environment: []
+exclusiveTasks: []
+exclusiveWithSelf: false
+executionRestriction: None
+exitCodeOutput: null
+exitCodeProcessing: Success Exitcode Range
+exitCodeText: null
+exitCodes: '0'
+exportReleaseLevel: 7.4.0.0
+exportTable: ops_task_universal
+firstRun: ''
+holdResources: false
+lastRun: ''
+lfDayConstraint: None
+lfDuration: 00:00:00:00
+lfEnabled: false
+lfNthAmount: 5
+lfOffsetDuration: null
+lfOffsetDurationUnit: Minutes
+lfOffsetPercentage: 0
+lfOffsetType: Percentage
+lfTime: 00:00
+lfType: Time
+logLevel: Inherited
+lsDayConstraint: None
+lsDuration: 00:00:00:00
+lsEnabled: false
+lsNthAmount: 5
+lsTime: 00:00
+lsType: Time
+name: diMaster_start check - bo_1 log
+notes: []
+opswiseGroups: []
+outputConditionOperator: '='
+outputConditionStrategy: Match Any
+outputConditionValue: null
+outputContentType: null
+outputFailureOnly: false
+outputPathExpression: null
+outputReturnFile: null
+outputReturnNline: '100'
+outputReturnSline: '1'
+outputReturnText: null
+outputReturnType: OUTERR
+outputType: STDOUT
+resPriority: 10
+resolveNameImmediately: false
+restrictionPeriod: None
+restrictionPeriodAfterDate: null
+restrictionPeriodAfterTime: null
+restrictionPeriodBeforeDate: null
+restrictionPeriodBeforeTime: null
+restrictionPeriodDateList: []
+retainSysIds: true
+retryExitCodes: null
+retryIndefinitely: false
+retryInterval: 60
+retryMaximum: 0
+retrySuppressFailure: false
+runCount: 0
+runTime: 0
+runtimeDir: null
+scriptField1:
+  label: Python UC Script
+  name: python_uc_script
+  value: checkfile_content.py
+simulation: false
+startHeld: false
+startHeldReason: null
+summary: null
+sysId: 55ac729c556f464faf942659ae741bff
+template: Python
+textField1:
+  label: Remote Python Script
+  name: python_script
+  value: null
+textField2:
+  label: Run Time Arguments
+  name: run_time_args
+  value: null
+textField3:
+  label: Python Location
+  name: python_exe_location
+  value: null
+timeZonePref: -- System Default --
+twDelayAmount: null
+twDelayDuration: 00:00:00:00
+twDelayType: None
+twWaitAmount: null
+twWaitDayConstraint: None
+twWaitDuration: 00:00:00:00
+twWaitTime: 00:00
+twWaitType: None
+twWorkflowOnly: -- System Default --
+type: taskUniversal
+userEstimatedDuration: null
+variables:
+- allowEmptyOption: false
+  allowUnlistedOption: false
+  description: null
+  name: error_keyword
+  options: []
+  sysId: f8d768cbb46849a689b9758e7491064e
+  value: Error
+- allowEmptyOption: false
+  allowUnlistedOption: false
+  description: null
+  name: folder_path
+  options: []
+  sysId: a786d05557224cf1b12d93e9ff9a4150
+  value: /home/oracle/VPBS.diMaster/logs
+- allowEmptyOption: false
+  allowUnlistedOption: false
+  description: null
+  name: log_file
+  options: []
+  sysId: 31cce1249c5944a384d9246ff1c32b13
+  value: bo_1
+- allowEmptyOption: false
+  allowUnlistedOption: false
+  description: null
+  name: stringset
+  options: []
+  sysId: c7059c390626434eafa4097b73103dc0
+  value: '''Connected to DB'', ''Register notification OK'''
+version: 5
+virtualResources: []
+waitForOutput: true
