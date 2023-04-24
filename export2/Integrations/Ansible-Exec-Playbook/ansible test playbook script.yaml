@@ -1,0 +1,152 @@
+actions:
+  abortActions: []
+  emailNotifications: []
+  setVariableActions: []
+  snmpNotifications: []
+  systemOperations: []
+agent: 129.213.52.12-rehl79- AGNT0001
+agentCluster: null
+agentClusterVar: null
+agentVar: null
+autoCleanup: false
+booleanField1:
+  label: Default Ansible Inventory
+  name: default_inventory
+  value: true
+broadcastCluster: null
+broadcastClusterVar: null
+choiceField1:
+  label: Execution choice
+  name: exec_option
+  value: script
+choiceField2:
+  label: Ansible Utility
+  name: ansible_utility
+  value: Ansible-Playbook
+cpDuration: null
+cpDurationUnit: Minutes
+createConsole: false
+credentials: null
+credentialsVar: null
+customField1:
+  label: null
+  value: null
+customField2:
+  label: null
+  value: null
+desktopInteract: false
+efDayConstraint: None
+efDuration: 00:00:00:00
+efEnabled: false
+efNthAmount: 5
+efOffsetDuration: null
+efOffsetDurationUnit: Minutes
+efOffsetPercentage: 0
+efOffsetType: Percentage
+efTime: 00:00
+efType: Time
+elevateUser: false
+environment: []
+exclusiveTasks: []
+exclusiveWithSelf: false
+executionRestriction: None
+exitCodeOutput: null
+exitCodeProcessing: Success Exitcode Range
+exitCodeText: null
+exitCodes: '0'
+exportReleaseLevel: 7.4.0.0
+exportTable: ops_task_universal
+firstRun: ''
+holdResources: false
+lastRun: ''
+lfDayConstraint: None
+lfDuration: 00:00:00:00
+lfEnabled: false
+lfNthAmount: 5
+lfOffsetDuration: null
+lfOffsetDurationUnit: Minutes
+lfOffsetPercentage: 0
+lfOffsetType: Percentage
+lfTime: 00:00
+lfType: Time
+logLevel: Inherited
+lsDayConstraint: None
+lsDuration: 00:00:00:00
+lsEnabled: false
+lsNthAmount: 5
+lsTime: 00:00
+lsType: Time
+name: ansible test playbook script
+notes: []
+opswiseGroups: []
+outputConditionOperator: '='
+outputConditionStrategy: Match Any
+outputConditionValue: null
+outputContentType: null
+outputFailureOnly: false
+outputPathExpression: null
+outputReturnFile: null
+outputReturnNline: '100'
+outputReturnSline: '1'
+outputReturnText: null
+outputReturnType: NONE
+outputType: STDOUT
+resPriority: 10
+resolveNameImmediately: false
+restrictionPeriod: None
+restrictionPeriodAfterDate: null
+restrictionPeriodAfterTime: null
+restrictionPeriodBeforeDate: null
+restrictionPeriodBeforeTime: null
+restrictionPeriodDateList: []
+retainSysIds: true
+retryExitCodes: null
+retryIndefinitely: false
+retryInterval: 60
+retryMaximum: 0
+retrySuppressFailure: false
+runCount: 0
+runTime: 0
+runtimeDir: null
+scriptField1:
+  label: Ansible Playbook Script
+  name: playbook_script
+  value: src_Ansible_runbook_test
+scriptField2:
+  label: UAC Ansible Inventory
+  name: uac_ansible_inventory
+  value: null
+simulation: false
+startHeld: false
+startHeldReason: null
+summary: null
+sysId: 050edc8592a144209cd72c5b32151df0
+template: Ansible-Exec-Playbook
+textField1:
+  label: Ansible Playbook
+  name: ansible_playbook
+  value: null
+textField2:
+  label: Default Ansible Inventory
+  name: ansible_inventory
+  value: /etc/ansible/hosts
+textField3:
+  label: Ansible Command Options
+  name: other_parameters
+  value: null
+timeZonePref: -- System Default --
+twDelayAmount: null
+twDelayDuration: 00:00:00:00
+twDelayType: None
+twWaitAmount: null
+twWaitDayConstraint: None
+twWaitDuration: 00:00:00:00
+twWaitTime: 00:00
+twWaitType: None
+twWorkflowOnly: -- System Default --
+type: taskUniversal
+userEstimatedDuration: null
+variables: []
+version: 1
+virtualResources: []
+waitForOutput: false
