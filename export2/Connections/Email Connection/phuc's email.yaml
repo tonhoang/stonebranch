@@ -1,0 +1,24 @@
+authentication: false
+authenticationType: None
+authorized: false
+defaultUser: null
+description: null
+emailAddr: phuc.le@svtech.com.vn
+exportReleaseLevel: 7.4.0.0
+exportTable: ops_email_connection
+imap: null
+imapPort: 143
+imapSsl: false
+imapStarttls: false
+name: phuc's email
+oauthClient: null
+opswiseGroups: []
+smtp: smtp.gmail.com
+smtpPort: 25
+smtpSsl: false
+smtpStarttls: false
+sysId: 37b0ad64ddad46bda2529feceadf72e3
+systemConnection: false
+trashFolder: null
+type: Outgoing
+version: 1
