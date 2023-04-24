@@ -1,0 +1,325 @@
+actions:
+  abortActions: []
+  emailNotifications: []
+  setVariableActions: []
+  snmpNotifications: []
+  systemOperations: []
+calculateCp: false
+calendar: null
+cpDuration: null
+cpDurationUnit: Minutes
+criticalEndpoints: []
+customField1:
+  label: null
+  value: null
+customField2:
+  label: null
+  value: null
+efDayConstraint: None
+efDuration: 00:00:00:00
+efEnabled: false
+efNthAmount: 5
+efOffsetDuration: null
+efOffsetDurationUnit: Minutes
+efOffsetPercentage: 0
+efOffsetType: Percentage
+efTime: 00:00
+efType: Time
+exclusiveTasks: []
+exclusiveWithSelf: false
+executionRestriction: None
+exportReleaseLevel: 7.4.0.0
+exportTable: ops_task_workflow
+firstRun: ''
+holdResources: false
+lastRun: ''
+layoutOption: -- None --
+lfDayConstraint: None
+lfDuration: 00:00:00:00
+lfEnabled: false
+lfNthAmount: 5
+lfOffsetDuration: null
+lfOffsetDurationUnit: Minutes
+lfOffsetPercentage: 0
+lfOffsetType: Percentage
+lfTime: 00:00
+lfType: Time
+logLevel: Inherited
+lsDayConstraint: None
+lsDuration: 00:00:00:00
+lsEnabled: false
+lsNthAmount: 5
+lsTime: 00:00
+lsType: Time
+name: FOAPI Start Workflow
+notes: []
+numberOfTasks: 11
+opswiseGroups: []
+overrideCalendar: false
+resPriority: 10
+resolveNameImmediately: false
+restrictionPeriod: None
+restrictionPeriodAfterDate: null
+restrictionPeriodAfterTime: null
+restrictionPeriodBeforeDate: null
+restrictionPeriodBeforeTime: null
+restrictionPeriodDateList: []
+retainSysIds: true
+runCount: 0
+runCriteria:
+- businessDay: false
+  complex: false
+  complexAdjective: Every
+  complexAdjustment: None
+  complexAdjustmentAmount: 1
+  complexAdjustmentType: Day
+  complexNoun:
+    value: Day
+  complexNouns:
+  - value: Day
+  complexNthAmount: 5
+  complexQualifier:
+    value: Year
+  complexQualifiers:
+  - value: Year
+  customDay: false
+  customDayChoice: null
+  description: null
+  evaluateAt: Run Time
+  holiday: false
+  holidayAdjustment: None
+  holidayAdjustmentAmount: 1
+  holidayAdjustmentType: Day
+  specificDay: false
+  specificDayFri: false
+  specificDayMon: false
+  specificDaySat: false
+  specificDaySun: false
+  specificDayThu: false
+  specificDayTue: false
+  specificDayWed: false
+  sysId: 1cc873cad7004ea9bc8a69427b60d8e3
+  task: Sleep 1 min after each retry
+  type: Skip Criteria
+  variable: true
+  variableName: foapi_start_recurrence_counter
+  variableOp: '='
+  variableValue: '0'
+  vertexId: Any
+runTime: 0
+simulation: false
+skippedOption: Show Skipped
+startHeld: false
+startHeldReason: null
+stepActions: []
+stepConditions: []
+summary: null
+sysId: fb83ae8fb6b04e0d994819ad13c32e02
+timeZonePref: -- System Default --
+twDelayAmount: null
+twDelayDuration: 00:00:00:00
+twDelayType: None
+twWaitAmount: null
+twWaitDayConstraint: None
+twWaitDuration: 00:00:00:00
+twWaitTime: 00:00
+twWaitType: None
+twWorkflowOnly: -- System Default --
+type: taskWorkflow
+userEstimatedDuration: null
+variables: []
+version: 2
+virtualResources: []
+workflowEdges:
+- condition:
+    value: Success
+  sourceId:
+    taskName: Pre_runFOAPI - start FOAPI java
+    value: '8'
+  straightEdge: true
+  targetId:
+    taskName: Hold 20 seconds
+    value: '2'
+- condition:
+    firstValue: ${foapi_start_recurrence_counter}
+    operator: <
+    secondValue: '3'
+    type: Variable
+  sourceId:
+    taskName: Sleep 1 min after each retry
+    value: '4'
+  straightEdge: true
+  targetId:
+    taskName: Pre_runFOAPI - start FOAPI java
+    value: '8'
+- condition:
+    value: Success
+  sourceId:
+    taskName: Hold 20 seconds
+    value: '2'
+  straightEdge: true
+  targetId:
+    taskAlias: 'check FOAPI_Start java process exists   '
+    taskName: check FOAPI_Start java process exists
+    value: '6'
+- condition:
+    value: Success
+  sourceId:
+    taskAlias: 'check FOAPI_Start java process exists   '
+    taskName: check FOAPI_Start java process exists
+    value: '6'
+  straightEdge: true
+  targetId:
+    taskAlias: 'FOAPI_start check - folder and error_1 log  '
+    taskName: FOAPI_start check - folder and error_1 log
+    value: '10'
+- condition:
+    value: Success
+  sourceId:
+    taskAlias: 'FOAPI_start check - folder and error_1 log  '
+    taskName: FOAPI_start check - folder and error_1 log
+    value: '10'
+  straightEdge: true
+  targetId:
+    taskName: FOAPI_start check - main_1 log
+    value: '11'
+- condition:
+    value: Success
+  sourceId:
+    taskName: FOAPI_start check - main_1 log
+    value: '11'
+  straightEdge: true
+  targetId:
+    taskName: FOAPI_start check - timesten_handler_1 log
+    value: '12'
+- condition:
+    value: Success
+  sourceId:
+    taskName: FOAPI_start check - timesten_handler_1 log
+    value: '12'
+  straightEdge: true
+  targetId:
+    taskName: NFO Start Workflow
+    value: '27'
+- condition:
+    value: Failure
+  sourceId:
+    taskName: Pre_runFOAPI - start FOAPI java
+    value: '8'
+  straightEdge: true
+  targetId:
+    taskName: Hold 20 seconds
+    value: '32'
+- condition:
+    value: Success
+  sourceId:
+    taskName: Hold 20 seconds
+    value: '32'
+  straightEdge: true
+  targetId:
+    taskName: check FOAPI_Start java process not exist
+    value: '30'
+- condition:
+    value: Failure
+  sourceId:
+    taskName: check FOAPI_Start java process not exist
+    value: '30'
+  straightEdge: true
+  targetId:
+    taskName: kill FOAPI java and retry start
+    value: '31'
+- condition:
+    value: Failure
+  sourceId:
+    taskAlias: 'FOAPI_start check - folder and error_1 log  '
+    taskName: FOAPI_start check - folder and error_1 log
+    value: '10'
+  straightEdge: true
+  targetId:
+    taskName: kill FOAPI java and retry start
+    value: '31'
+- condition:
+    value: Failure
+  sourceId:
+    taskName: FOAPI_start check - main_1 log
+    value: '11'
+  straightEdge: true
+  targetId:
+    taskName: kill FOAPI java and retry start
+    value: '31'
+- condition:
+    value: Failure
+  sourceId:
+    taskName: FOAPI_start check - timesten_handler_1 log
+    value: '12'
+  straightEdge: true
+  targetId:
+    taskName: kill FOAPI java and retry start
+    value: '31'
+workflowVertices:
+- alias: null
+  task:
+    value: Hold 20 seconds
+  vertexId: '2'
+  vertexX: '270'
+  vertexY: '170'
+- alias: null
+  task:
+    value: Sleep 1 min after each retry
+  vertexId: '4'
+  vertexX: '-80'
+  vertexY: '170'
+- alias: 'check FOAPI_Start java process exists   '
+  task:
+    value: check FOAPI_Start java process exists
+  vertexId: '6'
+  vertexX: '450'
+  vertexY: '170'
+- alias: null
+  task:
+    value: Pre_runFOAPI - start FOAPI java
+  vertexId: '8'
+  vertexX: '110'
+  vertexY: '170'
+- alias: 'FOAPI_start check - folder and error_1 log  '
+  task:
+    value: FOAPI_start check - folder and error_1 log
+  vertexId: '10'
+  vertexX: '450'
+  vertexY: '310'
+- alias: null
+  task:
+    value: FOAPI_start check - main_1 log
+  vertexId: '11'
+  vertexX: '450'
+  vertexY: '440'
+- alias: null
+  task:
+    value: FOAPI_start check - timesten_handler_1 log
+  vertexId: '12'
+  vertexX: '450'
+  vertexY: '590'
+- alias: null
+  task:
+    value: NFO Start Workflow
+  vertexId: '27'
+  vertexX: '670'
+  vertexY: '590'
+- alias: null
+  task:
+    value: check FOAPI_Start java process not exist
+  vertexId: '30'
+  vertexX: '110'
+  vertexY: '440'
+- alias: null
+  task:
+    value: kill FOAPI java and retry start
+  vertexId: '31'
+  vertexX: '110'
+  vertexY: '590'
+- alias: null
+  task:
+    value: Hold 20 seconds
+  vertexId: '32'
+  vertexX: '110'
+  vertexY: '310'
