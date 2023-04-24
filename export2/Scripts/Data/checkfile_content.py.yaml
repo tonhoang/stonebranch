@@ -1,0 +1,34 @@
+content: "import os\nimport sys\nfrom datetime import date\n\n# Please set the folder\
+  \ location\ndef search_str(file_path, string, keyword1):\n    with open(file_path,\
+  \ 'r') as file:\n        content = file.read()\n        # checking for errors in\
+  \ file\n        if keyword1 in content:\n            with open(file_path, 'r') as\
+  \ fp1:\n                print(\"Error Found in log\")\n                # When error\
+  \ is found, print the entire line\n                lines1 = fp1.readlines()\n  \
+  \              for line1 in lines1:\n                    if line1.find(keyword1)!=-1:\n\
+  \                        print(keyword1, 'string exists in file')\n            \
+  \            #print('Line Number:', lines1.index(line1))\n                     \
+  \   print('Line:', line1)\n                        sys.exit(1)\n        else:\n\
+  \            print(\"No errors found in log\")\n            for string in string_set:\n\
+  \                if string in content:\n                    print(\"String \" +\
+  \ '\"' + string + '\"' + \" exists!\")\n                    with open(file_path,\
+  \ 'r') as fp2:\n                        lines2 = fp2.readlines()\n             \
+  \           for line2 in lines2:\n                            if line2.find(string)\
+  \ != -1:\n                                print(\"Line number \" + str(lines2.index(line2))\
+  \ + \": \" + line2)\n                else:\n                        print(\"String\
+  \ does not exist in log: \" + '\"' + string + '\"')\n                        sys.exit(1)\n\
+  \nif __name__==\"__main__\":\n    today = date.today()\n    log_file = r'${folder_path}'\
+  \ + \"/\" + today.strftime(\"%d_%m_%Y\") + \"/${log_file}\"\n    print(log_file)\n\
+  \    file_exists = os.path.exists(log_file)\n    if file_exists:\n        print('The\
+  \ file exists: ' + log_file)\n        string_set = [${stringset}]\n        keyword1\
+  \ = '${error_keyword}'\n        search_str(log_file, string_set, keyword1)\n   \
+  \ else:\n        print('The log file does not exist')\n        sys.exit(1)"
+description: null
+exportReleaseLevel: 7.4.0.0
+exportTable: ops_script
+notes: []
+opswiseGroups: []
+resolveVariables: false
+scriptName: checkfile_content.py
+scriptType: Data
+sysId: e55464b464b14c4f98f41de76d7b51ba
+version: 1
