@@ -1,0 +1,201 @@
+actions:
+  abortActions: []
+  emailNotifications: []
+  setVariableActions:
+  - description: null
+    exitCodes: null
+    notificationOption: Operation Failure
+    notifyOnEarlyFinish: false
+    notifyOnLateFinish: false
+    notifyOnLateStart: false
+    notifyOnProjectedLate: false
+    status: 'Failed,
+
+      Success'
+    sysId: b000517835b44ee79e9b3b8bb1ca3e42
+    variableName: dimaster_start_recurrence_counter
+    variableScope: Global
+    variableValue: ${_add(1, ${__resolve('dimaster_start_recurrence_counter', '0')})}
+  snmpNotifications: []
+  systemOperations:
+  - agent: null
+    agentCluster: null
+    agentClusterVar: null
+    agentVar: null
+    description: null
+    execCommand: Force Finish/Cancel (Halt)
+    execCriteria: Oldest Active Instance
+    execId: ${ops_top_level_workflow_id}
+    execLookupOption: Instance Id
+    execName: null
+    execWorkflowName: null
+    execWorkflowNameCond: Equals
+    exitCodes: null
+    limit: null
+    notificationOption: Operation Failure
+    notifyOnEarlyFinish: false
+    notifyOnLateFinish: false
+    notifyOnLateStart: false
+    notifyOnProjectedLate: false
+    operation: Run Task Instance Command
+    overrideTriggerDateOffset: null
+    overrideTriggerDateTime: false
+    overrideTriggerTime: 00:00
+    status: 'Failed,
+
+      Success'
+    sysId: c0bc5cd83a2b48f48b028971c901be4d
+    task: null
+    taskLimitType: Unlimited
+    taskVar: null
+    trigger: null
+    triggerVar: null
+    variables: []
+    variablesUnresolved: false
+    virtualResource: null
+    virtualResourceVar: null
+  - agent: null
+    agentCluster: null
+    agentClusterVar: null
+    agentVar: null
+    description: null
+    execCommand: Cancel
+    execCriteria: Oldest Active Instance
+    execId: null
+    execLookupOption: Instance Name
+    execName: null
+    execWorkflowName: null
+    execWorkflowNameCond: Equals
+    exitCodes: null
+    limit: null
+    notificationOption: Operation Failure
+    notifyOnEarlyFinish: false
+    notifyOnLateFinish: false
+    notifyOnLateStart: false
+    notifyOnProjectedLate: false
+    operation: Launch Task
+    overrideTriggerDateOffset: null
+    overrideTriggerDateTime: false
+    overrideTriggerTime: 00:00
+    status: 'Failed,
+
+      Success'
+    sysId: d43185df6cea430696b9cb3591e34189
+    task: SyncMaster Start Workflow
+    taskLimitType: Unlimited
+    taskVar: null
+    trigger: null
+    triggerVar: null
+    variables: []
+    variablesUnresolved: false
+    virtualResource: null
+    virtualResourceVar: null
+agent: 129.213.52.12-rehl79- AGNT0001
+agentCluster: null
+agentClusterVar: null
+agentVar: null
+broadcastCluster: null
+broadcastClusterVar: null
+command: ./Pre_stopdiMasterr.sh
+commandOrScript: Command
+cpDuration: null
+cpDurationUnit: Minutes
+credentials: null
+credentialsVar: null
+customField1:
+  label: null
+  value: null
+customField2:
+  label: null
+  value: null
+efDayConstraint: None
+efDuration: 00:00:00:00
+efEnabled: false
+efNthAmount: 5
+efOffsetDuration: null
+efOffsetDurationUnit: Minutes
+efOffsetPercentage: 0
+efOffsetType: Percentage
+efTime: 00:00
+efType: Time
+environment: []
+exclusiveTasks: []
+exclusiveWithSelf: false
+executionRestriction: None
+exitCodeOutput: null
+exitCodeProcessing: Success Exitcode Range
+exitCodeText: null
+exitCodes: '0'
+exportReleaseLevel: 7.4.0.0
+exportTable: ops_task_unix
+firstRun: ''
+holdResources: false
+lastRun: ''
+lfDayConstraint: None
+lfDuration: 00:00:00:00
+lfEnabled: false
+lfNthAmount: 5
+lfOffsetDuration: null
+lfOffsetDurationUnit: Minutes
+lfOffsetPercentage: 0
+lfOffsetType: Percentage
+lfTime: 00:00
+lfType: Time
+logLevel: Inherited
+lsDayConstraint: None
+lsDuration: 00:00:01:10
+lsEnabled: true
+lsNthAmount: 5
+lsTime: 00:00
+lsType: Duration
+name: kill diMaster java and retry start
+notes: []
+opswiseGroups: []
+outputFailureOnly: false
+outputReturnFile: null
+outputReturnNline: '100'
+outputReturnSline: '1'
+outputReturnText: null
+outputReturnType: NONE
+outputType: STDOUT
+parameters: null
+resPriority: 10
+resolveNameImmediately: false
+restrictionPeriod: None
+restrictionPeriodAfterDate: null
+restrictionPeriodAfterTime: null
+restrictionPeriodBeforeDate: null
+restrictionPeriodBeforeTime: null
+restrictionPeriodDateList: []
+retainSysIds: true
+retryExitCodes: null
+retryIndefinitely: false
+retryInterval: 60
+retryMaximum: 0
+retrySuppressFailure: false
+runAsSudo: false
+runCount: 0
+runTime: 0
+runtimeDir: /home/oracle/VPBS.diMaster
+script: null
+simulation: false
+startHeld: false
+startHeldReason: null
+summary: null
+sysId: ee13db0f6b5c498691b6411f68b6c3d3
+timeZonePref: -- System Default --
+twDelayAmount: null
+twDelayDuration: 00:00:00:00
+twDelayType: None
+twWaitAmount: null
+twWaitDayConstraint: None
+twWaitDuration: 00:00:00:00
+twWaitTime: 00:00
+twWaitType: None
+twWorkflowOnly: -- System Default --
+type: taskUnix
+userEstimatedDuration: null
+variables: []
+version: 4
+virtualResources: []
+waitForOutput: false
