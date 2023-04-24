@@ -1,0 +1,147 @@
+actions:
+  abortActions: []
+  emailNotifications: []
+  setVariableActions: []
+  snmpNotifications: []
+  systemOperations: []
+agent: 129.213.52.12-rehl79- AGNT0001
+agentCluster: null
+agentClusterVar: null
+agentVar: null
+authenticatePeer: false
+broadcastCluster: null
+broadcastClusterVar: null
+codepage: -- None --
+command: GET
+compress: 'NO'
+cpDuration: null
+cpDurationUnit: Minutes
+createop: REPLACE
+credentials: null
+credentialsVar: null
+customField1:
+  label: null
+  value: null
+customField2:
+  label: null
+  value: null
+efDayConstraint: None
+efDuration: 00:00:00:00
+efEnabled: false
+efNthAmount: 5
+efOffsetDuration: null
+efOffsetDurationUnit: Minutes
+efOffsetPercentage: 0
+efOffsetType: Percentage
+efTime: 00:00
+efType: Time
+encrypt: 'NO'
+exclusiveTasks: []
+exclusiveWithSelf: false
+executionRestriction: None
+exitCodeOutput: null
+exitCodeProcessing: Success Exitcode Range
+exitCodeText: null
+exitCodes: '0'
+exportReleaseLevel: 7.4.0.0
+exportTable: ops_task_ftp
+firstRun: ''
+formOrScript: Form
+format: Binary
+ftpSubcommands: null
+holdResources: false
+jobcard: null
+lastRun: ''
+lfDayConstraint: None
+lfDuration: 00:00:00:00
+lfEnabled: false
+lfNthAmount: 5
+lfOffsetDuration: null
+lfOffsetDurationUnit: Minutes
+lfOffsetPercentage: 0
+lfOffsetType: Percentage
+lfTime: 00:00
+lfType: Time
+localFilename: /tmp/test/file1.txt
+logLevel: Inherited
+lsDayConstraint: None
+lsDuration: 00:00:00:00
+lsEnabled: false
+lsNthAmount: 5
+lsTime: 00:00
+lsType: Time
+move: false
+name: Linux to Windows
+nft: false
+notes: []
+opswiseGroups: []
+outputType: STDOUT
+primaryBroker: null
+primaryBrokerChoice: Utility Agent
+primaryBrokerRef: null
+primaryCluster: null
+primaryClusterRef: null
+primaryCredVar: null
+primaryCredentials: null
+primaryFilesys: -- None --
+primaryOpenOptions: null
+remoteCredVar: null
+remoteCredentials: null
+remoteFilename: C:\tutorial\file1.txt
+remoteServer: null
+resPriority: 10
+resolveNameImmediately: false
+restrictionPeriod: None
+restrictionPeriodAfterDate: null
+restrictionPeriodAfterTime: null
+restrictionPeriodBeforeDate: null
+restrictionPeriodBeforeTime: null
+restrictionPeriodDateList: []
+retainSysIds: true
+retryExitCodes: null
+retryIndefinitely: false
+retryInterval: 60
+retryMaximum: 0
+retrySuppressFailure: false
+runCount: 0
+runTime: 0
+runtimeDir: null
+script: null
+secondaryBroker: null
+secondaryBrokerChoice: Agent
+secondaryBrokerRef: oci-tonhoang-opc - AGNT0002
+secondaryCluster: null
+secondaryClusterRef: null
+secondaryCredVar: null
+secondaryCredentials: null
+secondaryFilesys: -- None --
+secondaryOpenOptions: null
+serverType: UDM
+showProgress: false
+simulation: false
+startHeld: false
+startHeldReason: null
+summary: null
+sysId: 5a4fa88cc23847cdb209eee52a5b116c
+timeZonePref: -- System Default --
+transferDirection: PUT
+transferMode: Passive
+trimSpace: false
+twDelayAmount: null
+twDelayDuration: 00:00:00:00
+twDelayType: None
+twWaitAmount: null
+twWaitDayConstraint: None
+twWaitDuration: 00:00:00:00
+twWaitTime: 00:00
+twWaitType: None
+twWorkflowOnly: -- System Default --
+type: taskFtp
+udmOperation: Copy
+udmOptions: null
+useRegex: false
+userEstimatedDuration: null
+variables: []
+verifyHostName: false
+version: 2
+virtualResources: []
