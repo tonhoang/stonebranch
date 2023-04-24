@@ -1,0 +1,102 @@
+actions:
+  abortActions: []
+  emailNotifications: []
+  setVariableActions: []
+  snmpNotifications: []
+  systemOperations: []
+cpDuration: null
+cpDurationUnit: Minutes
+customField1:
+  label: null
+  value: null
+customField2:
+  label: null
+  value: null
+efDayConstraint: None
+efDuration: 00:00:00:00
+efEnabled: false
+efNthAmount: 5
+efOffsetDuration: null
+efOffsetDurationUnit: Minutes
+efOffsetPercentage: 0
+efOffsetType: Percentage
+efTime: 00:00
+efType: Time
+eventTemplate: null
+eventType: Local
+exclusiveTasks: []
+exclusiveWithSelf: false
+executionRestriction: None
+expirationAction: Failed
+exportReleaseLevel: 7.4.0.0
+exportTable: ops_task_universal_monitor
+filter:
+  criteria:
+  - name: filelist
+    operator: CONTAINS
+    type: criterion
+    value: update_test.txt
+  logicalOperator: And
+firstRun: ''
+holdResources: false
+lastRun: ''
+lfDayConstraint: None
+lfDuration: 00:00:00:00
+lfEnabled: false
+lfNthAmount: 5
+lfOffsetDuration: null
+lfOffsetDurationUnit: Minutes
+lfOffsetPercentage: 0
+lfOffsetType: Percentage
+lfTime: 00:00
+lfType: Time
+logLevel: Inherited
+lsDayConstraint: None
+lsDuration: 00:00:00:00
+lsEnabled: false
+lsNthAmount: 5
+lsTime: 00:00
+lsType: Time
+name: sample-monitor-task
+notes: []
+opswiseGroups: []
+relativeTimeFrom: 00:00
+relativeTimeTo: null
+resPriority: 10
+resolveNameImmediately: false
+restrictionPeriod: None
+restrictionPeriodAfterDate: null
+restrictionPeriodAfterTime: null
+restrictionPeriodBeforeDate: null
+restrictionPeriodBeforeTime: null
+restrictionPeriodDateList: []
+retainSysIds: true
+runCount: 0
+runTime: 0
+simulation: false
+startHeld: false
+startHeldReason: null
+summary: null
+sysId: 1c7592d4d6dc42ec91ba6b9e09f14f0f
+taskUniversal: sample-publisher-task
+taskUniversalVariables: []
+template: UE Publisher
+templateEventTemplate:
+  label: Publisher Event
+  value: publisher_event
+timeScope: -- None --
+timeZonePref: -- System Default --
+twDelayAmount: null
+twDelayDuration: 00:00:00:00
+twDelayType: None
+twWaitAmount: null
+twWaitDayConstraint: None
+twWaitDuration: 00:00:00:00
+twWaitTime: 00:00
+twWaitType: None
+twWorkflowOnly: -- System Default --
+type: taskUniversalMonitor
+userEstimatedDuration: null
+variables: []
+version: 2
+virtualResources: []
