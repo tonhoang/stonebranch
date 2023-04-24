@@ -1,0 +1,301 @@
+actions:
+  abortActions: []
+  emailNotifications: []
+  setVariableActions: []
+  snmpNotifications: []
+  systemOperations: []
+calculateCp: false
+calendar: null
+cpDuration: null
+cpDurationUnit: Minutes
+criticalEndpoints: []
+customField1:
+  label: null
+  value: null
+customField2:
+  label: null
+  value: null
+efDayConstraint: None
+efDuration: 00:00:00:00
+efEnabled: false
+efNthAmount: 5
+efOffsetDuration: null
+efOffsetDurationUnit: Minutes
+efOffsetPercentage: 0
+efOffsetType: Percentage
+efTime: 00:00
+efType: Time
+exclusiveTasks: []
+exclusiveWithSelf: false
+executionRestriction: None
+exportReleaseLevel: 7.4.0.0
+exportTable: ops_task_workflow
+firstRun: ''
+holdResources: false
+lastRun: ''
+layoutOption: -- None --
+lfDayConstraint: None
+lfDuration: 00:00:00:00
+lfEnabled: false
+lfNthAmount: 5
+lfOffsetDuration: null
+lfOffsetDurationUnit: Minutes
+lfOffsetPercentage: 0
+lfOffsetType: Percentage
+lfTime: 00:00
+lfType: Time
+logLevel: Inherited
+lsDayConstraint: None
+lsDuration: 00:00:00:00
+lsEnabled: false
+lsNthAmount: 5
+lsTime: 00:00
+lsType: Time
+name: SyncMaster Start Workflow
+notes: []
+numberOfTasks: 10
+opswiseGroups: []
+overrideCalendar: false
+resPriority: 10
+resolveNameImmediately: false
+restrictionPeriod: None
+restrictionPeriodAfterDate: null
+restrictionPeriodAfterTime: null
+restrictionPeriodBeforeDate: null
+restrictionPeriodBeforeTime: null
+restrictionPeriodDateList: []
+retainSysIds: true
+runCount: 0
+runCriteria:
+- businessDay: false
+  complex: false
+  complexAdjective: Every
+  complexAdjustment: None
+  complexAdjustmentAmount: 1
+  complexAdjustmentType: Day
+  complexNoun:
+    value: Day
+  complexNouns:
+  - value: Day
+  complexNthAmount: 5
+  complexQualifier:
+    value: Year
+  complexQualifiers:
+  - value: Year
+  customDay: false
+  customDayChoice: null
+  description: null
+  evaluateAt: Run Time
+  holiday: false
+  holidayAdjustment: None
+  holidayAdjustmentAmount: 1
+  holidayAdjustmentType: Day
+  specificDay: false
+  specificDayFri: false
+  specificDayMon: false
+  specificDaySat: false
+  specificDaySun: false
+  specificDayThu: false
+  specificDayTue: false
+  specificDayWed: false
+  sysId: 6746942f7f054b47b5b50053242f4974
+  task: Sleep 1 min after each retry
+  type: Skip Criteria
+  variable: true
+  variableName: syncmaster_start_recurrence_counter
+  variableOp: '='
+  variableValue: '0'
+  vertexId: Any
+runTime: 0
+simulation: false
+skippedOption: Show Skipped
+startHeld: false
+startHeldReason: null
+stepActions: []
+stepConditions: []
+summary: null
+sysId: 59d59004d27f4bfc8e619c033715206d
+timeZonePref: -- System Default --
+twDelayAmount: null
+twDelayDuration: 00:00:00:00
+twDelayType: None
+twWaitAmount: null
+twWaitDayConstraint: None
+twWaitDuration: 00:00:00:00
+twWaitTime: 00:00
+twWaitType: None
+twWorkflowOnly: -- System Default --
+type: taskWorkflow
+userEstimatedDuration: null
+variables: []
+version: 1
+virtualResources: []
+workflowEdges:
+- condition:
+    firstValue: ${syncmaster_start_recurrence_counter}
+    operator: <
+    secondValue: '3'
+    type: Variable
+  sourceId:
+    taskName: Sleep 1 min after each retry
+    value: '8'
+  straightEdge: true
+  targetId:
+    taskName: Pre_runSyncMaster - start SyncMaster java
+    value: '9'
+- condition:
+    value: Success
+  sourceId:
+    taskName: Pre_runSyncMaster - start SyncMaster java
+    value: '9'
+  straightEdge: true
+  targetId:
+    taskName: Hold 20 seconds
+    value: '2'
+- condition:
+    value: Success
+  sourceId:
+    taskName: Hold 20 seconds
+    value: '2'
+  straightEdge: true
+  targetId:
+    taskAlias: 'check SyncMaster_Start java process exists  '
+    taskName: check SyncMaster_Start java process exists
+    value: '7'
+- condition:
+    value: Success
+  sourceId:
+    taskAlias: 'check SyncMaster_Start java process exists  '
+    taskName: check SyncMaster_Start java process exists
+    value: '7'
+  straightEdge: true
+  targetId:
+    taskAlias: 'SyncMaster_start check - folder and error_1 log '
+    taskName: SyncMaster_start check - folder and error_1 log
+    value: '21'
+- condition:
+    value: Success
+  sourceId:
+    taskAlias: 'SyncMaster_start check - folder and error_1 log '
+    taskName: SyncMaster_start check - folder and error_1 log
+    value: '21'
+  straightEdge: true
+  targetId:
+    taskName: SyncMaster_start check - main_1 log
+    value: '22'
+- condition:
+    value: Success
+  sourceId:
+    taskName: SyncMaster_start check - main_1 log
+    value: '22'
+  straightEdge: true
+  targetId:
+    taskName: diMaster Start Workflow
+    value: '29'
+- condition:
+    value: Failure
+  sourceId:
+    taskName: Pre_runSyncMaster - start SyncMaster java
+    value: '9'
+  straightEdge: true
+  targetId:
+    taskName: Hold 20 seconds
+    value: '35'
+- condition:
+    value: Success
+  sourceId:
+    taskName: Hold 20 seconds
+    value: '35'
+  straightEdge: true
+  targetId:
+    taskName: check SyncMaster_Start java process not exist
+    value: '33'
+- condition:
+    value: Failure
+  sourceId:
+    taskName: check SyncMaster_Start java process not exist
+    value: '33'
+  straightEdge: true
+  targetId:
+    taskName: kill SyncMaster java and retry start
+    value: '40'
+- condition:
+    value: Failure
+  sourceId:
+    taskAlias: 'SyncMaster_start check - folder and error_1 log '
+    taskName: SyncMaster_start check - folder and error_1 log
+    value: '21'
+  straightEdge: true
+  targetId:
+    taskName: kill SyncMaster java and retry start
+    value: '40'
+- condition:
+    value: Failure
+  sourceId:
+    taskName: SyncMaster_start check - main_1 log
+    value: '22'
+  straightEdge: true
+  targetId:
+    taskName: kill SyncMaster java and retry start
+    value: '40'
+workflowVertices:
+- alias: null
+  task:
+    value: Hold 20 seconds
+  vertexId: '2'
+  vertexX: '280'
+  vertexY: '180'
+- alias: 'check SyncMaster_Start java process exists  '
+  task:
+    value: check SyncMaster_Start java process exists
+  vertexId: '7'
+  vertexX: '470'
+  vertexY: '180'
+- alias: null
+  task:
+    value: Sleep 1 min after each retry
+  vertexId: '8'
+  vertexX: '-180'
+  vertexY: '180'
+- alias: null
+  task:
+    value: Pre_runSyncMaster - start SyncMaster java
+  vertexId: '9'
+  vertexX: '70'
+  vertexY: '180'
+- alias: 'SyncMaster_start check - folder and error_1 log '
+  task:
+    value: SyncMaster_start check - folder and error_1 log
+  vertexId: '21'
+  vertexX: '470'
+  vertexY: '390'
+- alias: null
+  task:
+    value: SyncMaster_start check - main_1 log
+  vertexId: '22'
+  vertexX: '470'
+  vertexY: '600'
+- alias: null
+  task:
+    value: diMaster Start Workflow
+  vertexId: '29'
+  vertexX: '680'
+  vertexY: '600'
+- alias: null
+  task:
+    value: check SyncMaster_Start java process not exist
+  vertexId: '33'
+  vertexX: '70'
+  vertexY: '450'
+- alias: null
+  task:
+    value: Hold 20 seconds
+  vertexId: '35'
+  vertexX: '70'
+  vertexY: '310'
+- alias: null
+  task:
+    value: kill SyncMaster java and retry start
+  vertexId: '40'
+  vertexX: '70'
+  vertexY: '600'
