@@ -1,0 +1,206 @@
+actions:
+  abortActions: []
+  emailNotifications: []
+  setVariableActions: []
+  snmpNotifications: []
+  systemOperations: []
+calculateCp: false
+calendar: null
+cpDuration: null
+cpDurationUnit: Minutes
+criticalEndpoints: []
+customField1:
+  label: null
+  value: null
+customField2:
+  label: null
+  value: null
+efDayConstraint: None
+efDuration: 00:00:00:00
+efEnabled: false
+efNthAmount: 5
+efOffsetDuration: null
+efOffsetDurationUnit: Minutes
+efOffsetPercentage: 0
+efOffsetType: Percentage
+efTime: 00:00
+efType: Time
+exclusiveTasks: []
+exclusiveWithSelf: false
+executionRestriction: None
+exportReleaseLevel: 7.4.0.0
+exportTable: ops_task_workflow
+firstRun: ''
+holdResources: false
+lastRun: ''
+layoutOption: -- None --
+lfDayConstraint: None
+lfDuration: 00:00:00:00
+lfEnabled: false
+lfNthAmount: 5
+lfOffsetDuration: null
+lfOffsetDurationUnit: Minutes
+lfOffsetPercentage: 0
+lfOffsetType: Percentage
+lfTime: 00:00
+lfType: Time
+logLevel: Inherited
+lsDayConstraint: None
+lsDuration: 00:00:00:00
+lsEnabled: false
+lsNthAmount: 5
+lsTime: 00:00
+lsType: Time
+name: AIO Workflow
+notes: []
+numberOfTasks: 8
+opswiseGroups: []
+overrideCalendar: false
+resPriority: 10
+resolveNameImmediately: false
+restrictionPeriod: None
+restrictionPeriodAfterDate: null
+restrictionPeriodAfterTime: null
+restrictionPeriodBeforeDate: null
+restrictionPeriodBeforeTime: null
+restrictionPeriodDateList: []
+retainSysIds: true
+runCount: 0
+runCriteria: []
+runTime: 0
+simulation: false
+skippedOption: Show Skipped
+startHeld: false
+startHeldReason: null
+stepActions: []
+stepConditions: []
+summary: null
+sysId: 12e873ea662a4905a25d3b32fb4b5ec7
+timeZonePref: -- System Default --
+twDelayAmount: null
+twDelayDuration: 00:00:00:00
+twDelayType: None
+twWaitAmount: null
+twWaitDayConstraint: None
+twWaitDuration: 00:00:00:00
+twWaitTime: 00:00
+twWaitType: None
+twWorkflowOnly: -- System Default --
+type: taskWorkflow
+userEstimatedDuration: null
+variables: []
+version: 1
+virtualResources: []
+workflowEdges:
+- condition:
+    value: Success
+  sourceId:
+    taskName: Sleep 30
+    value: '3'
+  straightEdge: true
+  targetId:
+    taskName: stonebranch-filemonitor-01
+    value: '4'
+- condition:
+    value: Success
+  sourceId:
+    taskName: stonebranch-filemonitor-01
+    value: '4'
+  straightEdge: true
+  targetId:
+    taskName: Read stdout script
+    value: '10'
+- condition:
+    value: Success
+  sourceId:
+    taskName: Read stdout script
+    value: '10'
+  straightEdge: true
+  targetId:
+    taskName: SQL with Variable
+    value: '2'
+- condition:
+    value: Success
+  sourceId:
+    taskName: stonebranch-filemonitor-01
+    value: '4'
+  straightEdge: true
+  targetId:
+    taskName: Pause for Manual
+    value: '15'
+- condition:
+    value: Success
+  sourceId:
+    taskName: Pause for Manual
+    value: '15'
+  straightEdge: true
+  targetId:
+    taskName: Linux to Windows
+    value: '8'
+- condition:
+    value: Success
+  sourceId:
+    taskName: Linux to Windows
+    value: '8'
+  straightEdge: true
+  targetId:
+    taskName: stonebranch-windowstask-02
+    value: '9'
+- condition:
+    value: Success
+  sourceId:
+    taskName: Linux to Windows
+    value: '8'
+  straightEdge: true
+  targetId:
+    taskName: stonebranch-emailtask-01
+    value: '5'
+workflowVertices:
+- alias: 'SQL with Variable '
+  task:
+    value: SQL with Variable
+  vertexId: '2'
+  vertexX: '530.5'
+  vertexY: '25'
+- alias: null
+  task:
+    value: Sleep 30
+  vertexId: '3'
+  vertexX: '30'
+  vertexY: '142.75'
+- alias: null
+  task:
+    value: stonebranch-filemonitor-01
+  vertexId: '4'
+  vertexX: '190.5'
+  vertexY: '142.75'
+- alias: null
+  task:
+    value: stonebranch-emailtask-01
+  vertexId: '5'
+  vertexX: '701.5'
+  vertexY: '339'
+- alias: null
+  task:
+    value: Linux to Windows
+  vertexId: '8'
+  vertexX: '524.5'
+  vertexY: '260.5'
+- alias: null
+  task:
+    value: stonebranch-windowstask-02
+  vertexId: '9'
+  vertexX: '711'
+  vertexY: '182'
+- alias: null
+  task:
+    value: Read stdout script
+  vertexId: '10'
+  vertexX: '374'
+  vertexY: '25'
+- alias: 'Pause for Manual '
+  task:
+    value: Pause for Manual
+  vertexId: '15'
+  vertexX: '371'
+  vertexY: '260.5'
