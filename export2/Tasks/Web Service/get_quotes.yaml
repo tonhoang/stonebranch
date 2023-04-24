@@ -1,0 +1,124 @@
+actions:
+  abortActions: []
+  emailNotifications: []
+  setVariableActions: []
+  snmpNotifications: []
+  systemOperations: []
+autoCleanup: false
+avgRunTime: 10
+avgRunTimeDisplay: 10 Seconds
+cpDuration: null
+cpDurationUnit: Minutes
+credentials: null
+credentialsVar: null
+customField1:
+  label: null
+  value: null
+customField2:
+  label: null
+  value: null
+efDayConstraint: None
+efDuration: 00:00:00:00
+efEnabled: false
+efNthAmount: 5
+efOffsetDuration: null
+efOffsetDurationUnit: Minutes
+efOffsetPercentage: 0
+efOffsetType: Percentage
+efTime: 00:00
+efType: Time
+exclusiveTasks: []
+exclusiveWithSelf: false
+executionRestriction: None
+exportReleaseLevel: 7.4.0.0
+exportTable: ops_task_web_service
+firstRun: 2023-04-17 12:00:16 +0700
+formData: []
+holdResources: false
+httpAuth: None
+httpHeaders: []
+httpMethod: GET
+httpPayloadType: Raw
+httpVersion: '1.1'
+insecure: false
+lastRun: 2023-04-17 12:00:16 +0700
+lastRunTime: 10
+lastRunTimeDisplay: 10 Seconds
+lfDayConstraint: None
+lfDuration: 00:00:00:00
+lfEnabled: false
+lfNthAmount: 5
+lfOffsetDuration: null
+lfOffsetDurationUnit: Minutes
+lfOffsetPercentage: 0
+lfOffsetType: Percentage
+lfTime: 00:00
+lfType: Time
+logLevel: Inherited
+lsDayConstraint: None
+lsDuration: 00:00:00:00
+lsEnabled: false
+lsNthAmount: 5
+lsTime: 00:00
+lsType: Time
+maxRunTime: 10
+maxRunTimeDisplay: 10 Seconds
+mimeType: null
+minRunTime: 10
+minRunTimeDisplay: 10 Seconds
+name: get_quotes
+notes: []
+opswiseGroups: []
+outputConditionOperator: '='
+outputConditionStrategy: Match Any
+outputConditionValue: null
+outputPathExpression: null
+outputType: Text
+payload: null
+payloadScript: null
+payloadSource: Form
+protocol: HTTP(S)/REST
+resPriority: 10
+resolveNameImmediately: false
+responseProcessingType: Default Success Status Code Range
+restrictionPeriod: None
+restrictionPeriodAfterDate: null
+restrictionPeriodAfterTime: null
+restrictionPeriodBeforeDate: null
+restrictionPeriodBeforeTime: null
+restrictionPeriodDateList: []
+retainSysIds: true
+retryIndefinitely: false
+retryInterval: 60
+retryMaximum: 0
+retrySuppressFailure: false
+runCount: 1
+runTime: 10
+simulation: false
+soapAction: null
+soapPayloadType: Body
+soapResponseOutput: Body/First Element
+soapVersion: '1.2'
+startHeld: false
+startHeldReason: null
+statusCodeRange: null
+summary: null
+sysId: 06fb053212c943edbb2f9e4c469f724e
+timeZonePref: -- System Default --
+timeout: null
+twDelayAmount: null
+twDelayDuration: 00:00:00:00
+twDelayType: None
+twWaitAmount: null
+twWaitDayConstraint: None
+twWaitDuration: 00:00:00:00
+twWaitTime: 00:00
+twWaitType: None
+twWorkflowOnly: -- System Default --
+type: taskWebService
+url: https://quotes.toscrape.com/page/1/
+urlParameters: []
+userEstimatedDuration: null
+variables: []
+version: 1
+virtualResources: []
