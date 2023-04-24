@@ -1,0 +1,33 @@
+content: "import datetime\nimport operator\nimport os\nimport sys\nimport time\n\n\
+  if __name__==\"__main__\":\n    sdlist = {}\n    now = time.time()\n    print(\"\
+  Starting to check current day's logs\")\n    # Log directory path\n    log_path\
+  \ = r'${folder_path}'\n    os.chdir(log_path)\n    for subdir in os.listdir(\".\"\
+  ):\n        if os.path.isdir(subdir):\n            timestamp = os.path.getmtime(subdir)\n\
+  \            # Get timestamp and sub directory name and store it in a dictionary\n\
+  \            sdlist[os.path.join(os.getcwd(), subdir)] = timestamp\n    # sort the\
+  \ available subdirectory based on timestamp\n    for i in sorted(sdlist.items(),\
+  \ key=operator.itemgetter(1)):\n        latest = str(f\"{i[0]}\")\n    new_subdir\
+  \ = latest.split(\"\\\\\")[-1]\n    today_format = datetime.datetime.now().strftime(\"\
+  %d_%m_%Y\")\n    print(f\"Current Date: {today_format}\")\n    print(\"Latest sub\
+  \ directory found is: \", new_subdir)\n    today_log_folder = log_path + \"/\" +\
+  \ str(today_format)\n    if today_log_folder != str(new_subdir):\n        print(\"\
+  The correct log folder does not exist\")\n        sys.exit(1)\n    else:\n     \
+  \   log_file = str(new_subdir) + \"/${error_log}\"\n        file_exists = os.path.exists(log_file)\n\
+  \        if file_exists:\n            print('The file exists: ' + log_file)\n  \
+  \          min = ${min_size}*1024\n            max = ${max_size}*1024\n        \
+  \    file_size = os.path.getsize(log_file)\n            print('File size is: ' +\
+  \ str(file_size) + ' bytes')\n            if min <= file_size <= max:\n        \
+  \        print('File size is correct')\n            else:\n                print('File\
+  \ size is not correct, please check the ' + log_file + ' log file')\n          \
+  \      sys.exit(1)\n        else:\n            print('The log file ' + log_file\
+  \ + ' does not exist')\n            sys.exit(1)"
+description: null
+exportReleaseLevel: 7.4.0.0
+exportTable: ops_script
+notes: []
+opswiseGroups: []
+resolveVariables: false
+scriptName: check_folder_and_file_size.py
+scriptType: Data
+sysId: 7623da628ea745f096703285fa58bff0
+version: 1
