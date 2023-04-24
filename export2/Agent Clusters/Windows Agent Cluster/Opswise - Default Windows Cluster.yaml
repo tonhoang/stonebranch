@@ -1,0 +1,31 @@
+agentLimitAmount: 10
+agentLimitType: Unlimited
+agents: []
+currentCount: 0
+description: null
+distribution: Any
+exportReleaseLevel: 7.4.0.0
+exportTable: ops_windows_agent_cluster
+ignoreInactiveAgents: false
+ignoreSuspendedAgents: false
+lastAgentUsed: null
+lastResolution: null
+limitAmount: 5
+limitType: Unlimited
+name: Opswise - Default Windows Cluster
+networkAlias: null
+networkAliasPort: null
+notifications:
+  emailNotifications: []
+  snmpNotifications: []
+opswiseGroups: []
+resolutionDescription: null
+resolutionStatus: None
+resumedOn: null
+retainSysIds: true
+strictBsrvcMembership: false
+suspended: false
+suspendedOn: null
+sysId: cb5b876aa9fec69f0032b55e0391d693
+type: windowsAgentCluster
+version: 1
