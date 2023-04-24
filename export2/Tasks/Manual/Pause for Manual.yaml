@@ -1,0 +1,106 @@
+actions:
+  abortActions: []
+  emailNotifications:
+  - bcc: null
+    body: ${_date} workflow failure; notification triggered by ${ops_task_name}
+    cc: null
+    description: null
+    emailConnection: null
+    emailTemplate: null
+    emailTemplateVar: null
+    exitCodes: null
+    listReportFormat: PDF
+    notifyOnEarlyFinish: false
+    notifyOnLateFinish: false
+    notifyOnLateStart: false
+    notifyOnProjectedLate: false
+    replyTo: null
+    report: null
+    reportVar: null
+    status: Action Required
+    subject: Issue with Workflow
+    sysId: 53dea268106e4be2928849de5c9a3556
+    to: phuc.le@svtech.com.vn
+  setVariableActions: []
+  snmpNotifications: []
+  systemOperations: []
+cpDuration: null
+cpDurationUnit: Minutes
+customField1:
+  label: null
+  value: null
+customField2:
+  label: null
+  value: null
+efDayConstraint: None
+efDuration: 00:00:00:00
+efEnabled: false
+efNthAmount: 5
+efOffsetDuration: null
+efOffsetDurationUnit: Minutes
+efOffsetPercentage: 0
+efOffsetType: Percentage
+efTime: 00:00
+efType: Time
+exclusiveTasks: []
+exclusiveWithSelf: false
+executionRestriction: None
+exportReleaseLevel: 7.4.0.0
+exportTable: ops_task_manual
+firstRun: ''
+holdResources: false
+lastRun: ''
+lfDayConstraint: None
+lfDuration: 00:00:02:00
+lfEnabled: false
+lfNthAmount: 5
+lfOffsetDuration: null
+lfOffsetDurationUnit: Minutes
+lfOffsetPercentage: 0
+lfOffsetType: Percentage
+lfTime: 00:00
+lfType: Duration
+logLevel: Inherited
+lsDayConstraint: None
+lsDuration: 00:00:00:00
+lsEnabled: false
+lsNthAmount: 5
+lsTime: 00:00
+lsType: Time
+name: Pause for Manual
+notes:
+- sysId: caf18cf19b394beda27a25974c9779f8
+  text: Make sure database is running.
+  title: Probable database problem
+opswiseGroups: []
+resPriority: 10
+resolveNameImmediately: false
+restrictionPeriod: None
+restrictionPeriodAfterDate: null
+restrictionPeriodAfterTime: null
+restrictionPeriodBeforeDate: null
+restrictionPeriodBeforeTime: null
+restrictionPeriodDateList: []
+retainSysIds: true
+runCount: 0
+runTime: 0
+simulation: false
+startHeld: false
+startHeldReason: null
+summary: A Manual task run at  ${_date()}
+sysId: eacb188103714dd7b235be42eb43660b
+timeZonePref: -- System Default --
+twDelayAmount: null
+twDelayDuration: 00:00:00:00
+twDelayType: None
+twWaitAmount: null
+twWaitDayConstraint: None
+twWaitDuration: 00:00:00:00
+twWaitTime: 00:00
+twWaitType: None
+twWorkflowOnly: -- System Default --
+type: taskManual
+userEstimatedDuration: null
+variables: []
+version: 1
+virtualResources: []
