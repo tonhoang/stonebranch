@@ -1,0 +1,13 @@
+content: "---\n   - name: Playbook\n     hosts: man_united\n     become: yes\n   \
+  \  become_user: root\n     tasks:\n       - name: ensure chronyd is running\n  \
+  \       service:\n           name: chronyd\n           state: started"
+description: null
+exportReleaseLevel: 7.4.0.0
+exportTable: ops_script
+notes: []
+opswiseGroups: []
+resolveVariables: false
+scriptName: src_Ansible_runbook_test
+scriptType: Data
+sysId: b2008adef24f4b18aef26fea8afd0acc
+version: 1
