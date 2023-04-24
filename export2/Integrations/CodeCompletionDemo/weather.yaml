@@ -1,0 +1,168 @@
+actions:
+  abortActions: []
+  emailNotifications: []
+  setVariableActions: []
+  snmpNotifications: []
+  systemOperations: []
+agent: 129.213.52.12-rehl79- AGNT0001
+agentCluster: null
+agentClusterVar: null
+agentVar: null
+autoCleanup: false
+avgRunTime: 2
+avgRunTimeDisplay: 2 Seconds
+booleanField1:
+  label: Sample Boolean Field
+  name: sample_boolean
+  value: false
+broadcastCluster: null
+broadcastClusterVar: null
+choiceField1:
+  label: Action
+  name: action
+  value: print
+choiceField2:
+  label: Sample Dynamic Choice Field 1
+  name: sample_dynamic_choice_1
+  value: Start
+choiceField3:
+  label: Sample Dynamic Choice Field 2
+  name: sample_dynamic_choice_2
+  value: System
+cpDuration: null
+cpDurationUnit: Minutes
+createConsole: false
+credentials: null
+credentialsVar: null
+customField1:
+  label: null
+  value: null
+customField2:
+  label: null
+  value: null
+desktopInteract: false
+efDayConstraint: None
+efDuration: 00:00:00:00
+efEnabled: false
+efNthAmount: 5
+efOffsetDuration: null
+efOffsetDurationUnit: Minutes
+efOffsetPercentage: 0
+efOffsetType: Percentage
+efTime: 00:00
+efType: Time
+elevateUser: false
+environment: []
+exclusiveTasks: []
+exclusiveWithSelf: false
+executionRestriction: None
+exitCodeOutput: null
+exitCodeProcessing: Success Exitcode Range
+exitCodeText: null
+exitCodes: '0'
+exportReleaseLevel: 7.4.0.0
+exportTable: ops_task_universal
+firstRun: 2023-04-17 17:19:50 +0700
+floatField1:
+  label: Sample Float Field
+  name: sample_float
+  value: 3.14
+floatField2:
+  label: Temp
+  name: temp
+  value: null
+floatField3:
+  label: Humidity
+  name: humidity
+  value: null
+holdResources: false
+intField1:
+  label: Sample Integer Field
+  name: sample_integer
+  value: 5
+lastRun: 2023-04-20 15:10:51 +0700
+lastRunTime: 3
+lastRunTimeDisplay: 3 Seconds
+lfDayConstraint: None
+lfDuration: 00:00:00:00
+lfEnabled: false
+lfNthAmount: 5
+lfOffsetDuration: null
+lfOffsetDurationUnit: Minutes
+lfOffsetPercentage: 0
+lfOffsetType: Percentage
+lfTime: 00:00
+lfType: Time
+logLevel: Inherited
+lsDayConstraint: None
+lsDuration: 00:00:00:00
+lsEnabled: false
+lsNthAmount: 5
+lsTime: 00:00
+lsType: Time
+maxRunTime: 3
+maxRunTimeDisplay: 3 Seconds
+minRunTime: 2
+minRunTimeDisplay: 2 Seconds
+name: weather
+notes: []
+opswiseGroups: []
+outputConditionOperator: '='
+outputConditionStrategy: Match Any
+outputConditionValue: null
+outputContentType: null
+outputFailureOnly: false
+outputPathExpression: null
+outputReturnFile: null
+outputReturnNline: '100'
+outputReturnSline: '1'
+outputReturnText: null
+outputReturnType: OUTERR
+outputType: STDOUT
+resPriority: 10
+resolveNameImmediately: false
+restrictionPeriod: None
+restrictionPeriodAfterDate: null
+restrictionPeriodAfterTime: null
+restrictionPeriodBeforeDate: null
+restrictionPeriodBeforeTime: null
+restrictionPeriodDateList: []
+retainSysIds: true
+retryExitCodes: null
+retryIndefinitely: false
+retryInterval: 60
+retryMaximum: 0
+retrySuppressFailure: false
+runCount: 3
+runTime: 7
+runtimeDir: null
+simulation: false
+startHeld: false
+startHeldReason: null
+summary: current weather
+sysId: eaf8a0e9c42b4887b2722ab587681d43
+template: CodeCompletionDemo
+textField1:
+  label: Sample Plain Text Field
+  name: sample_plain_text
+  value: Hello World!
+textField2:
+  label: URL
+  name: url
+  value: https://api.openweathermap.org/data/2.5/onecall?lat=21.0294498&lon=105.8544441&exclude=hourly,daily&appid=07a92bdc234b052aee22ad1f7151f201&lang=vi&units=metric
+timeZonePref: -- System Default --
+twDelayAmount: null
+twDelayDuration: 00:00:00:00
+twDelayType: None
+twWaitAmount: null
+twWaitDayConstraint: None
+twWaitDuration: 00:00:00:00
+twWaitTime: 00:00
+twWaitType: None
+twWorkflowOnly: -- System Default --
+type: taskUniversal
+userEstimatedDuration: null
+variables: []
+version: 1
+virtualResources: []
+waitForOutput: false
