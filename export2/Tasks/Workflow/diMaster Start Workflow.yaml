@@ -1,0 +1,334 @@
+actions:
+  abortActions: []
+  emailNotifications: []
+  setVariableActions: []
+  snmpNotifications: []
+  systemOperations: []
+calculateCp: false
+calendar: null
+cpDuration: null
+cpDurationUnit: Minutes
+criticalEndpoints: []
+customField1:
+  label: null
+  value: null
+customField2:
+  label: null
+  value: null
+efDayConstraint: None
+efDuration: 00:00:00:00
+efEnabled: false
+efNthAmount: 5
+efOffsetDuration: null
+efOffsetDurationUnit: Minutes
+efOffsetPercentage: 0
+efOffsetType: Percentage
+efTime: 00:00
+efType: Time
+exclusiveTasks: []
+exclusiveWithSelf: false
+executionRestriction: None
+exportReleaseLevel: 7.4.0.0
+exportTable: ops_task_workflow
+firstRun: ''
+holdResources: false
+lastRun: ''
+layoutOption: -- None --
+lfDayConstraint: None
+lfDuration: 00:00:00:00
+lfEnabled: false
+lfNthAmount: 5
+lfOffsetDuration: null
+lfOffsetDurationUnit: Minutes
+lfOffsetPercentage: 0
+lfOffsetType: Percentage
+lfTime: 00:00
+lfType: Time
+logLevel: Inherited
+lsDayConstraint: None
+lsDuration: 00:00:00:00
+lsEnabled: false
+lsNthAmount: 5
+lsTime: 00:00
+lsType: Time
+name: diMaster Start Workflow
+notes: []
+numberOfTasks: 11
+opswiseGroups: []
+overrideCalendar: false
+resPriority: 10
+resolveNameImmediately: false
+restrictionPeriod: None
+restrictionPeriodAfterDate: null
+restrictionPeriodAfterTime: null
+restrictionPeriodBeforeDate: null
+restrictionPeriodBeforeTime: null
+restrictionPeriodDateList: []
+retainSysIds: true
+runCount: 0
+runCriteria:
+- businessDay: false
+  complex: false
+  complexAdjective: Every
+  complexAdjustment: None
+  complexAdjustmentAmount: 1
+  complexAdjustmentType: Day
+  complexNoun:
+    value: Day
+  complexNouns:
+  - value: Day
+  complexNthAmount: 5
+  complexQualifier:
+    value: Year
+  complexQualifiers:
+  - value: Year
+  customDay: false
+  customDayChoice: null
+  description: null
+  evaluateAt: Run Time
+  holiday: false
+  holidayAdjustment: None
+  holidayAdjustmentAmount: 1
+  holidayAdjustmentType: Day
+  specificDay: false
+  specificDayFri: false
+  specificDayMon: false
+  specificDaySat: false
+  specificDaySun: false
+  specificDayThu: false
+  specificDayTue: false
+  specificDayWed: false
+  sysId: 09aeafba28e14d90938487cb77588684
+  task: Sleep 1 min after each retry
+  type: Skip Criteria
+  variable: true
+  variableName: dimaster_start_recurrence_counter
+  variableOp: '='
+  variableValue: '0'
+  vertexId: Any
+runTime: 0
+simulation: false
+skippedOption: Show Skipped
+startHeld: false
+startHeldReason: null
+stepActions: []
+stepConditions: []
+summary: null
+sysId: 0cdf88bab19d40e0b9c33d58a24efc57
+timeZonePref: -- System Default --
+twDelayAmount: null
+twDelayDuration: 00:00:00:00
+twDelayType: None
+twWaitAmount: null
+twWaitDayConstraint: None
+twWaitDuration: 00:00:00:00
+twWaitTime: 00:00
+twWaitType: None
+twWorkflowOnly: -- System Default --
+type: taskWorkflow
+userEstimatedDuration: null
+variables: []
+version: 2
+virtualResources: []
+workflowEdges:
+- condition:
+    firstValue: ${dimaster_start_recurrence_counter}
+    operator: <
+    secondValue: '3'
+    type: Variable
+  sourceId:
+    taskName: Sleep 1 min after each retry
+    value: '4'
+  straightEdge: true
+  targetId:
+    taskAlias: 'Pre_rundiMaster - start diMaster java '
+    taskName: Pre_rundiMaster - start diMaster java
+    value: '9'
+- condition:
+    value: Success
+  sourceId:
+    taskAlias: 'Pre_rundiMaster - start diMaster java '
+    taskName: Pre_rundiMaster - start diMaster java
+    value: '9'
+  straightEdge: true
+  targetId:
+    taskName: Hold 20 seconds
+    value: '3'
+- condition:
+    value: Success
+  sourceId:
+    taskName: Hold 20 seconds
+    value: '3'
+  straightEdge: true
+  targetId:
+    taskAlias: 'check diMaster_Start java process exists  '
+    taskName: check diMaster_Start java process exists
+    value: '6'
+- condition:
+    value: Success
+  sourceId:
+    taskAlias: 'check diMaster_Start java process exists  '
+    taskName: check diMaster_Start java process exists
+    value: '6'
+  straightEdge: true
+  targetId:
+    taskAlias: 'diMaster_start check - folder and error_1 log  '
+    taskName: diMaster_start check - folder and error_1 log
+    value: '11'
+- condition:
+    value: Success
+  sourceId:
+    taskAlias: 'diMaster_start check - folder and error_1 log  '
+    taskName: diMaster_start check - folder and error_1 log
+    value: '11'
+  straightEdge: true
+  targetId:
+    taskAlias: 'diMaster_start check - main_1 log '
+    taskName: diMaster_start check - main_1 log
+    value: '13'
+- condition:
+    value: Success
+  sourceId:
+    taskAlias: 'diMaster_start check - main_1 log '
+    taskName: diMaster_start check - main_1 log
+    value: '13'
+  straightEdge: true
+  targetId:
+    taskAlias: 'diMaster_start check - bo_1 log  '
+    taskName: diMaster_start check - bo_1 log
+    value: '12'
+- condition:
+    value: Success
+  sourceId:
+    taskAlias: 'diMaster_start check - bo_1 log  '
+    taskName: diMaster_start check - bo_1 log
+    value: '12'
+  straightEdge: true
+  targetId:
+    taskName: FOAPI Start Workflow
+    value: '34'
+- condition:
+    value: Failure
+  sourceId:
+    taskAlias: 'Pre_rundiMaster - start diMaster java '
+    taskName: Pre_rundiMaster - start diMaster java
+    value: '9'
+  straightEdge: true
+  targetId:
+    taskName: Hold 20 seconds
+    value: '36'
+- condition:
+    value: Success
+  sourceId:
+    taskName: Hold 20 seconds
+    value: '36'
+  straightEdge: true
+  targetId:
+    taskName: check diMaster_Start java process not exist
+    value: '39'
+- condition:
+    value: Failure
+  sourceId:
+    taskName: check diMaster_Start java process not exist
+    value: '39'
+  straightEdge: true
+  targetId:
+    taskName: kill diMaster java and retry start
+    value: '38'
+- condition:
+    value: Failure
+  sourceId:
+    taskAlias: 'diMaster_start check - folder and error_1 log  '
+    taskName: diMaster_start check - folder and error_1 log
+    value: '11'
+  straightEdge: true
+  targetId:
+    taskName: kill diMaster java and retry start
+    value: '38'
+- condition:
+    value: Failure
+  sourceId:
+    taskAlias: 'diMaster_start check - main_1 log '
+    taskName: diMaster_start check - main_1 log
+    value: '13'
+  straightEdge: true
+  targetId:
+    taskName: kill diMaster java and retry start
+    value: '38'
+- condition:
+    value: Failure
+  sourceId:
+    taskAlias: 'diMaster_start check - bo_1 log  '
+    taskName: diMaster_start check - bo_1 log
+    value: '12'
+  straightEdge: true
+  targetId:
+    taskName: kill diMaster java and retry start
+    value: '38'
+workflowVertices:
+- alias: null
+  task:
+    value: Hold 20 seconds
+  vertexId: '3'
+  vertexX: '100'
+  vertexY: '120'
+- alias: null
+  task:
+    value: Sleep 1 min after each retry
+  vertexId: '4'
+  vertexX: '-299'
+  vertexY: '120'
+- alias: 'check diMaster_Start java process exists  '
+  task:
+    value: check diMaster_Start java process exists
+  vertexId: '6'
+  vertexX: '300'
+  vertexY: '120'
+- alias: 'Pre_rundiMaster - start diMaster java '
+  task:
+    value: Pre_rundiMaster - start diMaster java
+  vertexId: '9'
+  vertexX: '-70'
+  vertexY: '120'
+- alias: 'diMaster_start check - folder and error_1 log  '
+  task:
+    value: diMaster_start check - folder and error_1 log
+  vertexId: '11'
+  vertexX: '300'
+  vertexY: '260'
+- alias: 'diMaster_start check - bo_1 log  '
+  task:
+    value: diMaster_start check - bo_1 log
+  vertexId: '12'
+  vertexX: '300'
+  vertexY: '530'
+- alias: 'diMaster_start check - main_1 log '
+  task:
+    value: diMaster_start check - main_1 log
+  vertexId: '13'
+  vertexX: '300'
+  vertexY: '390'
+- alias: null
+  task:
+    value: FOAPI Start Workflow
+  vertexId: '34'
+  vertexX: '480'
+  vertexY: '530'
+- alias: null
+  task:
+    value: Hold 20 seconds
+  vertexId: '36'
+  vertexX: '-70'
+  vertexY: '260'
+- alias: null
+  task:
+    value: kill diMaster java and retry start
+  vertexId: '38'
+  vertexX: '-70'
+  vertexY: '530'
+- alias: null
+  task:
+    value: check diMaster_Start java process not exist
+  vertexId: '39'
+  vertexX: '-70'
+  vertexY: '390'
