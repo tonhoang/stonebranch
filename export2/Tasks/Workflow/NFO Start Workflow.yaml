@@ -1,0 +1,353 @@
+actions:
+  abortActions: []
+  emailNotifications: []
+  setVariableActions: []
+  snmpNotifications: []
+  systemOperations: []
+calculateCp: false
+calendar: null
+cpDuration: null
+cpDurationUnit: Minutes
+criticalEndpoints: []
+customField1:
+  label: null
+  value: null
+customField2:
+  label: null
+  value: null
+efDayConstraint: None
+efDuration: 00:00:00:00
+efEnabled: false
+efNthAmount: 5
+efOffsetDuration: null
+efOffsetDurationUnit: Minutes
+efOffsetPercentage: 0
+efOffsetType: Percentage
+efTime: 00:00
+efType: Time
+exclusiveTasks: []
+exclusiveWithSelf: false
+executionRestriction: None
+exportReleaseLevel: 7.4.0.0
+exportTable: ops_task_workflow
+firstRun: ''
+holdResources: false
+lastRun: ''
+layoutOption: -- None --
+lfDayConstraint: None
+lfDuration: 00:00:00:00
+lfEnabled: false
+lfNthAmount: 5
+lfOffsetDuration: null
+lfOffsetDurationUnit: Minutes
+lfOffsetPercentage: 0
+lfOffsetType: Percentage
+lfTime: 00:00
+lfType: Time
+logLevel: Inherited
+lsDayConstraint: None
+lsDuration: 00:00:00:00
+lsEnabled: false
+lsNthAmount: 5
+lsTime: 00:00
+lsType: Time
+name: NFO Start Workflow
+notes: []
+numberOfTasks: 12
+opswiseGroups: []
+overrideCalendar: false
+resPriority: 10
+resolveNameImmediately: false
+restrictionPeriod: None
+restrictionPeriodAfterDate: null
+restrictionPeriodAfterTime: null
+restrictionPeriodBeforeDate: null
+restrictionPeriodBeforeTime: null
+restrictionPeriodDateList: []
+retainSysIds: true
+runCount: 0
+runCriteria:
+- businessDay: false
+  complex: false
+  complexAdjective: Every
+  complexAdjustment: None
+  complexAdjustmentAmount: 1
+  complexAdjustmentType: Day
+  complexNoun:
+    value: Day
+  complexNouns:
+  - value: Day
+  complexNthAmount: 5
+  complexQualifier:
+    value: Year
+  complexQualifiers:
+  - value: Year
+  customDay: false
+  customDayChoice: null
+  description: null
+  evaluateAt: Run Time
+  holiday: false
+  holidayAdjustment: None
+  holidayAdjustmentAmount: 1
+  holidayAdjustmentType: Day
+  specificDay: false
+  specificDayFri: false
+  specificDayMon: false
+  specificDaySat: false
+  specificDaySun: false
+  specificDayThu: false
+  specificDayTue: false
+  specificDayWed: false
+  sysId: 99f5ed1932c04987ac6cb5d322c47ad7
+  task: Sleep 1 min after each retry
+  type: Skip Criteria
+  variable: true
+  variableName: nfo_start_recurrence_counter
+  variableOp: '='
+  variableValue: '0'
+  vertexId: Any
+runTime: 0
+simulation: false
+skippedOption: Show Skipped
+startHeld: false
+startHeldReason: null
+stepActions: []
+stepConditions: []
+summary: null
+sysId: eb1a70c09bab45b398ff7f3c1db43bc6
+timeZonePref: -- System Default --
+twDelayAmount: null
+twDelayDuration: 00:00:00:00
+twDelayType: None
+twWaitAmount: null
+twWaitDayConstraint: None
+twWaitDuration: 00:00:00:00
+twWaitTime: 00:00
+twWaitType: None
+twWorkflowOnly: -- System Default --
+type: taskWorkflow
+userEstimatedDuration: null
+variables: []
+version: 2
+virtualResources: []
+workflowEdges:
+- condition:
+    value: Success
+  sourceId:
+    taskName: Sleep 1 min after each retry
+    value: '4'
+  straightEdge: true
+  targetId:
+    taskName: NFO runServer java
+    value: '7'
+- condition:
+    value: Success
+  sourceId:
+    taskName: NFO runServer java
+    value: '7'
+  straightEdge: true
+  targetId:
+    taskName: Hold 20 seconds
+    value: '2'
+- condition:
+    value: Success
+  sourceId:
+    taskName: Hold 20 seconds
+    value: '2'
+  straightEdge: true
+  targetId:
+    taskAlias: 'check NFO_Start java process exists '
+    taskName: check NFO_Start java process exists
+    value: '6'
+- condition:
+    value: Success
+  sourceId:
+    taskAlias: 'check NFO_Start java process exists '
+    taskName: check NFO_Start java process exists
+    value: '6'
+  straightEdge: true
+  targetId:
+    taskAlias: 'NFO_start check - folder and error_1 log  '
+    taskName: NFO_start check - folder and error_1 log
+    value: '16'
+- condition:
+    value: Success
+  sourceId:
+    taskAlias: 'NFO_start check - folder and error_1 log  '
+    taskName: NFO_start check - folder and error_1 log
+    value: '16'
+  straightEdge: true
+  targetId:
+    taskName: NFO_start check - folder and bo_1 log
+    value: '17'
+- condition:
+    value: Success
+  sourceId:
+    taskName: NFO_start check - folder and bo_1 log
+    value: '17'
+  straightEdge: true
+  targetId:
+    taskAlias: 'NFO_start check - main_1 log '
+    taskName: NFO_start check - main_1 log
+    value: '20'
+- condition:
+    value: Success
+  sourceId:
+    taskAlias: 'NFO_start check - main_1 log '
+    taskName: NFO_start check - main_1 log
+    value: '20'
+  straightEdge: true
+  targetId:
+    taskAlias: 'NFO_start check - order_1 log  '
+    taskName: NFO_start check - order_1 log
+    value: '21'
+- condition:
+    value: Success
+  sourceId:
+    taskAlias: 'NFO_start check - order_1 log  '
+    taskName: NFO_start check - order_1 log
+    value: '21'
+  straightEdge: true
+  targetId:
+    taskAlias: 'Success script (standin for workflow) '
+    taskName: Success script (standin for workflow)
+    value: '22'
+- condition:
+    value: Failure
+  sourceId:
+    taskName: NFO runServer java
+    value: '7'
+  straightEdge: true
+  targetId:
+    taskName: Hold 20 seconds
+    value: '28'
+- condition:
+    value: Success
+  sourceId:
+    taskName: Hold 20 seconds
+    value: '28'
+  straightEdge: true
+  targetId:
+    taskName: check NFO_Start java process not exist
+    value: '26'
+- condition:
+    value: Failure
+  sourceId:
+    taskName: check NFO_Start java process not exist
+    value: '26'
+  straightEdge: true
+  targetId:
+    taskName: kill NFO java and retry start
+    value: '27'
+- condition:
+    value: Failure
+  sourceId:
+    taskAlias: 'NFO_start check - folder and error_1 log  '
+    taskName: NFO_start check - folder and error_1 log
+    value: '16'
+  straightEdge: true
+  targetId:
+    taskName: kill NFO java and retry start
+    value: '27'
+- condition:
+    value: Failure
+  sourceId:
+    taskName: NFO_start check - folder and bo_1 log
+    value: '17'
+  straightEdge: true
+  targetId:
+    taskName: kill NFO java and retry start
+    value: '27'
+- condition:
+    value: Failure
+  sourceId:
+    taskAlias: 'NFO_start check - main_1 log '
+    taskName: NFO_start check - main_1 log
+    value: '20'
+  straightEdge: true
+  targetId:
+    taskName: kill NFO java and retry start
+    value: '27'
+- condition:
+    value: Failure
+  sourceId:
+    taskAlias: 'NFO_start check - order_1 log  '
+    taskName: NFO_start check - order_1 log
+    value: '21'
+  straightEdge: true
+  targetId:
+    taskName: kill NFO java and retry start
+    value: '27'
+workflowVertices:
+- alias: null
+  task:
+    value: Hold 20 seconds
+  vertexId: '2'
+  vertexX: '270'
+  vertexY: '180'
+- alias: null
+  task:
+    value: Sleep 1 min after each retry
+  vertexId: '4'
+  vertexX: '-20'
+  vertexY: '180'
+- alias: 'check NFO_Start java process exists '
+  task:
+    value: check NFO_Start java process exists
+  vertexId: '6'
+  vertexX: '450'
+  vertexY: '180'
+- alias: null
+  task:
+    value: NFO runServer java
+  vertexId: '7'
+  vertexX: '140'
+  vertexY: '180'
+- alias: 'NFO_start check - folder and error_1 log  '
+  task:
+    value: NFO_start check - folder and error_1 log
+  vertexId: '16'
+  vertexX: '450'
+  vertexY: '300'
+- alias: null
+  task:
+    value: NFO_start check - folder and bo_1 log
+  vertexId: '17'
+  vertexX: '450'
+  vertexY: '420'
+- alias: 'NFO_start check - main_1 log '
+  task:
+    value: NFO_start check - main_1 log
+  vertexId: '20'
+  vertexX: '450'
+  vertexY: '540'
+- alias: 'NFO_start check - order_1 log  '
+  task:
+    value: NFO_start check - order_1 log
+  vertexId: '21'
+  vertexX: '450'
+  vertexY: '660'
+- alias: 'Success script (standin for workflow) '
+  task:
+    value: Success script (standin for workflow)
+  vertexId: '22'
+  vertexX: '670'
+  vertexY: '660'
+- alias: null
+  task:
+    value: check NFO_Start java process not exist
+  vertexId: '26'
+  vertexX: '140'
+  vertexY: '480'
+- alias: null
+  task:
+    value: kill NFO java and retry start
+  vertexId: '27'
+  vertexX: '140'
+  vertexY: '660'
+- alias: null
+  task:
+    value: Hold 20 seconds
+  vertexId: '28'
+  vertexX: '140'
+  vertexY: '330'
