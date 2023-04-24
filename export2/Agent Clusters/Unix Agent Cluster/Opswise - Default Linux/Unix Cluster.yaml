@@ -1,0 +1,52 @@
+agentLimitAmount: 10
+agentLimitType: Unlimited
+agents:
+- agentName: oci-tonhoang-opc - AGNT0002
+  membershipDecommissioned: false
+  membershipResumedOn: null
+  membershipSuspended: false
+  membershipSuspendedOn: null
+  sysId: 8777759491804ae1badd2042454e2fbd
+  type: Linux/Unix
+- agentName: 129.213.52.12-rehl79- AGNT0001
+  membershipDecommissioned: false
+  membershipResumedOn: null
+  membershipSuspended: false
+  membershipSuspendedOn: null
+  sysId: 99fa0f2c9e904cb4a6420ae52b623afa
+  type: Linux/Unix
+- agentName: oci-tonhoang-ubuntu - AGNT0003
+  membershipDecommissioned: false
+  membershipResumedOn: null
+  membershipSuspended: false
+  membershipSuspendedOn: null
+  sysId: aa97d4b794164a9aafdc542b6113db9f
+  type: Linux/Unix
+currentCount: 0
+description: null
+distribution: Any
+exportReleaseLevel: 7.4.0.0
+exportTable: ops_unix_agent_cluster
+ignoreInactiveAgents: false
+ignoreSuspendedAgents: false
+lastAgentUsed: null
+lastResolution: null
+limitAmount: 5
+limitType: Unlimited
+name: Opswise - Default Linux/Unix Cluster
+networkAlias: null
+networkAliasPort: null
+notifications:
+  emailNotifications: []
+  snmpNotifications: []
+opswiseGroups: []
+resolutionDescription: null
+resolutionStatus: None
+resumedOn: null
+retainSysIds: true
+strictBsrvcMembership: false
+suspended: false
+suspendedOn: null
+sysId: cb5c8998a9fec69f003b05b69a2061e4
+type: unixAgentCluster
+version: 1
