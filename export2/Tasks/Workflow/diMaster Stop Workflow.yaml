@@ -1,0 +1,203 @@
+actions:
+  abortActions: []
+  emailNotifications: []
+  setVariableActions: []
+  snmpNotifications: []
+  systemOperations: []
+calculateCp: false
+calendar: null
+cpDuration: null
+cpDurationUnit: Minutes
+criticalEndpoints: []
+customField1:
+  label: null
+  value: null
+customField2:
+  label: null
+  value: null
+efDayConstraint: None
+efDuration: 00:00:00:00
+efEnabled: false
+efNthAmount: 5
+efOffsetDuration: null
+efOffsetDurationUnit: Minutes
+efOffsetPercentage: 0
+efOffsetType: Percentage
+efTime: 00:00
+efType: Time
+exclusiveTasks: []
+exclusiveWithSelf: false
+executionRestriction: None
+exportReleaseLevel: 7.4.0.0
+exportTable: ops_task_workflow
+firstRun: ''
+holdResources: false
+lastRun: ''
+layoutOption: -- None --
+lfDayConstraint: None
+lfDuration: 00:00:00:00
+lfEnabled: false
+lfNthAmount: 5
+lfOffsetDuration: null
+lfOffsetDurationUnit: Minutes
+lfOffsetPercentage: 0
+lfOffsetType: Percentage
+lfTime: 00:00
+lfType: Time
+logLevel: Inherited
+lsDayConstraint: None
+lsDuration: 00:00:00:00
+lsEnabled: false
+lsNthAmount: 5
+lsTime: 00:00
+lsType: Time
+name: diMaster Stop Workflow
+notes: []
+numberOfTasks: 5
+opswiseGroups: []
+overrideCalendar: false
+resPriority: 10
+resolveNameImmediately: false
+restrictionPeriod: None
+restrictionPeriodAfterDate: null
+restrictionPeriodAfterTime: null
+restrictionPeriodBeforeDate: null
+restrictionPeriodBeforeTime: null
+restrictionPeriodDateList: []
+retainSysIds: true
+runCount: 0
+runCriteria:
+- businessDay: false
+  complex: false
+  complexAdjective: Every
+  complexAdjustment: None
+  complexAdjustmentAmount: 1
+  complexAdjustmentType: Day
+  complexNoun:
+    value: Day
+  complexNouns:
+  - value: Day
+  complexNthAmount: 5
+  complexQualifier:
+    value: Year
+  complexQualifiers:
+  - value: Year
+  customDay: false
+  customDayChoice: null
+  description: null
+  evaluateAt: Run Time
+  holiday: false
+  holidayAdjustment: None
+  holidayAdjustmentAmount: 1
+  holidayAdjustmentType: Day
+  specificDay: false
+  specificDayFri: false
+  specificDayMon: false
+  specificDaySat: false
+  specificDaySun: false
+  specificDayThu: false
+  specificDayTue: false
+  specificDayWed: false
+  sysId: cd9d0612df4e49f795d1a192c6b20bf8
+  task: Sleep 1 min after each retry
+  type: Skip Criteria
+  variable: true
+  variableName: dimaster_stop_recurrence_counter
+  variableOp: '='
+  variableValue: '0'
+  vertexId: Any
+runTime: 0
+simulation: false
+skippedOption: Show Skipped
+startHeld: false
+startHeldReason: null
+stepActions: []
+stepConditions: []
+summary: null
+sysId: 059f504d9bbe469bb79f72853856d2c7
+timeZonePref: -- System Default --
+twDelayAmount: null
+twDelayDuration: 00:00:00:00
+twDelayType: None
+twWaitAmount: null
+twWaitDayConstraint: None
+twWaitDuration: 00:00:00:00
+twWaitTime: 00:00
+twWaitType: None
+twWorkflowOnly: -- System Default --
+type: taskWorkflow
+userEstimatedDuration: null
+variables: []
+version: 1
+virtualResources: []
+workflowEdges:
+- condition:
+    firstValue: ${dimaster_stop_recurrence_counter}
+    operator: <
+    secondValue: '3'
+    type: Variable
+  sourceId:
+    taskName: Sleep 1 min after each retry
+    value: '10'
+  straightEdge: true
+  targetId:
+    taskName: Pre_stopdiMaster - stop diMaster java
+    value: '9'
+- condition:
+    value: Success/Failure
+  sourceId:
+    taskName: Pre_stopdiMaster - stop diMaster java
+    value: '9'
+  straightEdge: true
+  targetId:
+    taskName: Hold 20 seconds
+    value: '2'
+- condition:
+    value: Success
+  sourceId:
+    taskName: Hold 20 seconds
+    value: '2'
+  straightEdge: true
+  targetId:
+    taskName: check diMaster_Stop java process not exist
+    value: '8'
+- condition:
+    value: Success
+  sourceId:
+    taskName: check diMaster_Stop java process not exist
+    value: '8'
+  straightEdge: true
+  targetId:
+    taskName: NFO Stop Workflow
+    value: '21'
+workflowVertices:
+- alias: null
+  task:
+    value: Hold 20 seconds
+  vertexId: '2'
+  vertexX: '360'
+  vertexY: '170'
+- alias: 'check diMaster_Stop java process not exist '
+  task:
+    value: check diMaster_Stop java process not exist
+  vertexId: '8'
+  vertexX: '550'
+  vertexY: '170'
+- alias: 'Pre_stopdiMaster - stop diMaster java  '
+  task:
+    value: Pre_stopdiMaster - stop diMaster java
+  vertexId: '9'
+  vertexX: '170'
+  vertexY: '170'
+- alias: null
+  task:
+    value: Sleep 1 min after each retry
+  vertexId: '10'
+  vertexX: '-50'
+  vertexY: '170'
+- alias: null
+  task:
+    value: NFO Stop Workflow
+  vertexId: '21'
+  vertexX: '750'
+  vertexY: '170'
