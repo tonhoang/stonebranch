@@ -1,0 +1,12 @@
+credentials: null
+dbDescription: null
+dbDriver: com.mysql.cj.jdbc.Driver
+dbMaxRows: 100
+dbType: MySQL
+dbUrl: jdbc:mysql://<server>:<port3306>/<database>
+exportReleaseLevel: 7.4.0.0
+exportTable: ops_database_connection
+name: MySQL connection
+opswiseGroups: []
+sysId: ea3be0ebcb544b2293283af59cc1378c
+version: 1
