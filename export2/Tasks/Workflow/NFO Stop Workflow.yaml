@@ -1,0 +1,204 @@
+actions:
+  abortActions: []
+  emailNotifications: []
+  setVariableActions: []
+  snmpNotifications: []
+  systemOperations: []
+calculateCp: false
+calendar: null
+cpDuration: null
+cpDurationUnit: Minutes
+criticalEndpoints: []
+customField1:
+  label: null
+  value: null
+customField2:
+  label: null
+  value: null
+efDayConstraint: None
+efDuration: 00:00:00:00
+efEnabled: false
+efNthAmount: 5
+efOffsetDuration: null
+efOffsetDurationUnit: Minutes
+efOffsetPercentage: 0
+efOffsetType: Percentage
+efTime: 00:00
+efType: Time
+exclusiveTasks: []
+exclusiveWithSelf: false
+executionRestriction: None
+exportReleaseLevel: 7.4.0.0
+exportTable: ops_task_workflow
+firstRun: ''
+holdResources: false
+lastRun: ''
+layoutOption: -- None --
+lfDayConstraint: None
+lfDuration: 00:00:00:00
+lfEnabled: false
+lfNthAmount: 5
+lfOffsetDuration: null
+lfOffsetDurationUnit: Minutes
+lfOffsetPercentage: 0
+lfOffsetType: Percentage
+lfTime: 00:00
+lfType: Time
+logLevel: Inherited
+lsDayConstraint: None
+lsDuration: 00:00:00:00
+lsEnabled: false
+lsNthAmount: 5
+lsTime: 00:00
+lsType: Time
+name: NFO Stop Workflow
+notes: []
+numberOfTasks: 5
+opswiseGroups: []
+overrideCalendar: false
+resPriority: 10
+resolveNameImmediately: false
+restrictionPeriod: None
+restrictionPeriodAfterDate: null
+restrictionPeriodAfterTime: null
+restrictionPeriodBeforeDate: null
+restrictionPeriodBeforeTime: null
+restrictionPeriodDateList: []
+retainSysIds: true
+runCount: 0
+runCriteria:
+- businessDay: false
+  complex: false
+  complexAdjective: Every
+  complexAdjustment: None
+  complexAdjustmentAmount: 1
+  complexAdjustmentType: Day
+  complexNoun:
+    value: Day
+  complexNouns:
+  - value: Day
+  complexNthAmount: 5
+  complexQualifier:
+    value: Year
+  complexQualifiers:
+  - value: Year
+  customDay: false
+  customDayChoice: null
+  description: null
+  evaluateAt: Run Time
+  holiday: false
+  holidayAdjustment: None
+  holidayAdjustmentAmount: 1
+  holidayAdjustmentType: Day
+  specificDay: false
+  specificDayFri: false
+  specificDayMon: false
+  specificDaySat: false
+  specificDaySun: false
+  specificDayThu: false
+  specificDayTue: false
+  specificDayWed: false
+  sysId: 1e0c15f058544c83a45bcb64b20363dc
+  task: Sleep 1 min after each retry
+  type: Skip Criteria
+  variable: true
+  variableName: nfo_stop_recurrence_counter
+  variableOp: '='
+  variableValue: '0'
+  vertexId: Any
+runTime: 0
+simulation: false
+skippedOption: Show Skipped
+startHeld: false
+startHeldReason: null
+stepActions: []
+stepConditions: []
+summary: null
+sysId: 4abc3e0ba8aa41d0b45fceb540d8f643
+timeZonePref: -- System Default --
+twDelayAmount: null
+twDelayDuration: 00:00:00:00
+twDelayType: None
+twWaitAmount: null
+twWaitDayConstraint: None
+twWaitDuration: 00:00:00:00
+twWaitTime: 00:00
+twWaitType: None
+twWorkflowOnly: -- System Default --
+type: taskWorkflow
+userEstimatedDuration: null
+variables: []
+version: 1
+virtualResources: []
+workflowEdges:
+- condition:
+    value: Success
+  sourceId:
+    taskName: Sleep 1 min after each retry
+    value: '4'
+  straightEdge: true
+  targetId:
+    taskAlias: 'NFO stopServer java '
+    taskName: NFO stopServer java
+    value: '8'
+- condition:
+    value: Success/Failure
+  sourceId:
+    taskAlias: 'NFO stopServer java '
+    taskName: NFO stopServer java
+    value: '8'
+  straightEdge: true
+  targetId:
+    taskName: Hold 20 seconds
+    value: '2'
+- condition:
+    value: Success
+  sourceId:
+    taskName: Hold 20 seconds
+    value: '2'
+  straightEdge: true
+  targetId:
+    taskAlias: 'check NFO_Stop java process not exist '
+    taskName: check NFO_Stop java process not exist
+    value: '7'
+- condition:
+    value: Success
+  sourceId:
+    taskAlias: 'check NFO_Stop java process not exist '
+    taskName: check NFO_Stop java process not exist
+    value: '7'
+  straightEdge: true
+  targetId:
+    taskName: FOAPI Stop Workflow
+    value: '17'
+workflowVertices:
+- alias: null
+  task:
+    value: Hold 20 seconds
+  vertexId: '2'
+  vertexX: '210'
+  vertexY: '60'
+- alias: null
+  task:
+    value: Sleep 1 min after each retry
+  vertexId: '4'
+  vertexX: '-90'
+  vertexY: '60'
+- alias: 'check NFO_Stop java process not exist '
+  task:
+    value: check NFO_Stop java process not exist
+  vertexId: '7'
+  vertexX: '390'
+  vertexY: '60'
+- alias: 'NFO stopServer java '
+  task:
+    value: NFO stopServer java
+  vertexId: '8'
+  vertexX: '70'
+  vertexY: '60'
+- alias: null
+  task:
+    value: FOAPI Stop Workflow
+  vertexId: '17'
+  vertexX: '570'
+  vertexY: '60'
