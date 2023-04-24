@@ -1,0 +1,172 @@
+actions:
+  abortActions: []
+  emailNotifications: []
+  setVariableActions: []
+  snmpNotifications: []
+  systemOperations: []
+agent: 129.213.52.12-rehl79- AGNT0001
+agentCluster: null
+agentClusterVar: null
+agentVar: null
+autoCleanup: false
+booleanField1:
+  label: Not Default Python
+  name: not_default_python
+  value: false
+broadcastCluster: null
+broadcastClusterVar: null
+choiceField1:
+  label: Python Script Location
+  name: python_script_location
+  value: uc_script_library
+cpDuration: null
+cpDurationUnit: Minutes
+createConsole: false
+credentials: null
+credentialsVar: null
+customField1:
+  label: null
+  value: null
+customField2:
+  label: null
+  value: null
+desktopInteract: false
+efDayConstraint: None
+efDuration: 00:00:00:00
+efEnabled: false
+efNthAmount: 5
+efOffsetDuration: null
+efOffsetDurationUnit: Minutes
+efOffsetPercentage: 0
+efOffsetType: Percentage
+efTime: 00:00
+efType: Time
+elevateUser: false
+environment: []
+exclusiveTasks: []
+exclusiveWithSelf: false
+executionRestriction: None
+exitCodeOutput: null
+exitCodeProcessing: Success Exitcode Range
+exitCodeText: null
+exitCodes: '0'
+exportReleaseLevel: 7.4.0.0
+exportTable: ops_task_universal
+firstRun: ''
+holdResources: false
+lastRun: ''
+lfDayConstraint: None
+lfDuration: 00:00:00:00
+lfEnabled: false
+lfNthAmount: 5
+lfOffsetDuration: null
+lfOffsetDurationUnit: Minutes
+lfOffsetPercentage: 0
+lfOffsetType: Percentage
+lfTime: 00:00
+lfType: Time
+logLevel: Inherited
+lsDayConstraint: None
+lsDuration: 00:00:00:00
+lsEnabled: false
+lsNthAmount: 5
+lsTime: 00:00
+lsType: Time
+name: FOAPI_start check - main_1 log
+notes: []
+opswiseGroups: []
+outputConditionOperator: '='
+outputConditionStrategy: Match Any
+outputConditionValue: null
+outputContentType: null
+outputFailureOnly: false
+outputPathExpression: null
+outputReturnFile: null
+outputReturnNline: '100'
+outputReturnSline: '1'
+outputReturnText: null
+outputReturnType: OUTERR
+outputType: STDOUT
+resPriority: 10
+resolveNameImmediately: false
+restrictionPeriod: None
+restrictionPeriodAfterDate: null
+restrictionPeriodAfterTime: null
+restrictionPeriodBeforeDate: null
+restrictionPeriodBeforeTime: null
+restrictionPeriodDateList: []
+retainSysIds: true
+retryExitCodes: null
+retryIndefinitely: false
+retryInterval: 60
+retryMaximum: 0
+retrySuppressFailure: false
+runCount: 0
+runTime: 0
+runtimeDir: null
+scriptField1:
+  label: Python UC Script
+  name: python_uc_script
+  value: checkfile_content.py
+simulation: false
+startHeld: false
+startHeldReason: null
+summary: null
+sysId: 03e0599f5e88497cab14a6d908ae0b16
+template: Python
+textField1:
+  label: Remote Python Script
+  name: python_script
+  value: null
+textField2:
+  label: Run Time Arguments
+  name: run_time_args
+  value: null
+textField3:
+  label: Python Location
+  name: python_exe_location
+  value: null
+timeZonePref: -- System Default --
+twDelayAmount: null
+twDelayDuration: 00:00:00:00
+twDelayType: None
+twWaitAmount: null
+twWaitDayConstraint: None
+twWaitDuration: 00:00:00:00
+twWaitTime: 00:00
+twWaitType: None
+twWorkflowOnly: -- System Default --
+type: taskUniversal
+userEstimatedDuration: null
+variables:
+- allowEmptyOption: false
+  allowUnlistedOption: false
+  description: null
+  name: error_keyword
+  options: []
+  sysId: e0c61de594dd4faf975c2e300530069c
+  value: Error
+- allowEmptyOption: false
+  allowUnlistedOption: false
+  description: null
+  name: folder_path
+  options: []
+  sysId: 49b1e1400bd642688c406b61ff077926
+  value: /home/fo/FOAPI/logs
+- allowEmptyOption: false
+  allowUnlistedOption: false
+  description: null
+  name: log_file
+  options: []
+  sysId: b9d4dc16ae1a46aaa3f77cc2964af585
+  value: main_1
+- allowEmptyOption: false
+  allowUnlistedOption: false
+  description: null
+  name: stringset
+  options: []
+  sysId: f4010869962949e0b400d244e13dec35
+  value: '''HttpConnector started!'''
+version: 4
+virtualResources: []
+waitForOutput: true
